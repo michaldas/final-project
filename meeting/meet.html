@@ -1,0 +1,27 @@
+<div ng-controller="meetCtrl">
+<form role="form">
+    <legend>Create New Meeting</legend>
+
+    <div class="form-group" ng-repeat="meet in meetings" >
+        <label for="title">title</label>
+        <input type="text" class="add-input" id="title" placeholder="Input text" ng-model="title" ng-model-instant>
+        <label for="title">Date</label>
+        <input type="date" class="add-input" id="Date" placeholder="Input Date" ng-model="Date" ng-model-instant>
+        <label for="title">Time</label>
+        <input type="time" class="add-input" id="Time" placeholder="Input Time" ng-model="Time" ng-model-instant>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="addMeet()">Create</button>
+</form>
+
+<h2>{{meet.title}}</h2>
+<h2>{{meet.date}}</h2>
+<h2>{{meet.time}}</h2>
+
+
+
+
+
+
+</div>
+
+    

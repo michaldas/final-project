@@ -1,0 +1,27 @@
+
+    <div class="login container" ng-controller="loginCtrl">
+      <form action="" method="POST" role="form">
+
+     <div class="form-group">
+             <label for="usern">User Name</label>
+             <input type="text" class="form-control" id="usern" placeholder="Input User Name" ng-model="usern">
+          </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Input password" ng-model="password">
+         </div>
+                    
+           <div class="checkbox">
+            <label>
+             <input type="checkbox" value="" ng-model="check">
+             Important
+            </label>
+         </div>
+                    
+            <button type="submit" class="btn btn-primary" ng-click="login()">Submit</button>
+            </form>
+
+            </div>
+        </div>
+    
