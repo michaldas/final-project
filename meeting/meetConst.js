@@ -10,7 +10,7 @@ app.factory("Meet" , function(){
     return Meet;
     
 });
-var meetings=[];
+
 
 //, tasks, costs, notifications, participants
 // this.tasks = tasks;

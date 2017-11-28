@@ -44,6 +44,28 @@
 
 
 </div>
+<div ng-controller="costsCtrl" >
+    
+    <form  action="" method="POST" role="form" >
+        <legend>Add Costs</legend>
+
+    <div class="form-group" >
+        <label for="costelement">Costelement</label>
+        <input type="text" class="add-input" id="costelement" placeholder="Input text" ng-model="costelement" ng-model-instant>
+        <label for="amount">Amount</label>
+        <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="amount" ng-model-instant>
+        
+        
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="addCost()">Create</button>
+    </form>
+    <div ng-repeat="cost in costs">
+        <h2>{{cost.costelement}}</h2>
+        <h2>{{cost.amount}}</h2>
+        
+    </div>
+   
+</div>
 
 
 
