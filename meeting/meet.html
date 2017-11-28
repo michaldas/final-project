@@ -12,6 +12,7 @@
         <input type="time" class="add-input" id="time" placeholder="Input Time" ng-model="time" ng-model-instant>
         <label for="location">Location</label>
         <input type="text" class="add-input" id="location" placeholder="Input location" ng-model="location" ng-model-instant>
+        
     </div>
     <button type="submit" class="btn btn-primary" ng-click="addMeet()">Create</button>
     </form>
@@ -25,9 +26,24 @@
    
 </div>
 
+<div ng-controller="taskListCtrl">
+    <ul>
+  
+  <li ng-repeat= "task in tasks">
+    <button class="clear-btn" ng-click="delete()">Delete</button>
+    <input type="checkbox" ng-model="task.completed"/>
+     <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span></li>
+</ul>
+<form>
+  <input class="add-input" placeholder="New Item..." type="text" ng-model="formTaskItem" ng-model-instant />
+  <input class="add-input" placeholder="Amount" type="text" ng-model="formTaskAmount" ng-model-instant />
+  <button class="add-btn" ng-click="addTask()">Add Item</button>
+  <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+  <button class="clear-btn" ng-click="showCompleted()">display completed</button>
+</form>
 
 
-
+</div>
 
 
 

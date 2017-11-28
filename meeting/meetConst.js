@@ -5,6 +5,7 @@ app.factory("Meet" , function(){
        this.date = date;
        this.time = time;
        this.location = location;
+      // this.createdBy = createdBy;
     }
     return Meet;
     
