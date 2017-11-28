@@ -1,10 +1,5 @@
 app.controller("taskListCtrl", function($scope, Task) {
   
-   /* function Task(item, amount, completed = false) {
-      this.item = item;
-      this.amount = amount;
-      this.completed = false;
-    }*/
   
     $scope.tasks = [new Task("cola", "2", completed = false),
       new Task("water", "4", completed = false),

@@ -10,13 +10,13 @@ app.factory("meetings", function(Meet) {
     }
 
     function addMeet(meet) {
-        cars.push(meet);
+        meetings.push(meet);
     }
 
     function setMeets(meetsPlain) {
-        cars = [];
+        meetings = [];
         for (var i = 0; i < meetsPlain.length; i++) {
-            cars.push(new Car(meetsPlain[i].title, meetsPlain[i].date, 
+            meetings.push(new Meet(meetsPlain[i].title, meetsPlain[i].date, 
                 meetsPlain[i].time, meetsPlain[i].location))
         }
     }

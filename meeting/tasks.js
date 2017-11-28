@@ -1,30 +1,30 @@
-app.factory("tasks", function(Meet) {
+app.factory("tasks", function(Task) {
     var tasks = [];
 
     function getAll() {
         return tasks;
     }
 
-    function getMeetById(index) {
+    function getTaskById(index) {
         return tasks[index];
     }
 
-    function addMeet(task) {
-        cars.push(meet);
+    function addTask(task) {
+        cars.push(task);
     }
 
-    function setMeets(meetsPlain) {
-        cars = [];
-        for (var i = 0; i < meetsPlain.length; i++) {
-            cars.push(new Car(meetsPlain[i].title, meetsPlain[i].date, 
-                meetsPlain[i].time, meetsPlain[i].location))
+    function setTasks(tasksPlain) {
+        tasks = [];
+        for (var i = 0; i < tasksPlain.length; i++) {
+            cars.push(new Task(tasksPlain[i].item, tasksPlain[i].amount, 
+                tasksPlain[i].completed))
         }
     }
 
     return {
         getAll: getAll,
-        getMeetById: getMeetById,
-        addMeet: addMeet,
-        setMeets: setMeets
+        getMeetById: getTasktById,
+        addMeet: addTask,
+        setMeets: setTasks
     }
 })
