@@ -3,13 +3,15 @@
         "email" : "mmm@mmm.com",
         "password" : "mmm123",
         "firstName" : "Nir",
-        "lastName" : "Chanes"
+        "lastName" : "Chanes",
+        "location" : "haifa"
     },
     {
         "email" : "nnn@mmm.com",
         "password" : "nnn123",
         "firstName" : "MAR",
-        "lastName" : "VVVV"
+        "lastName" : "VVVV",
+        "location" : "haifa"
     }
 ]
    
