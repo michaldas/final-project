@@ -1,4 +1,4 @@
-app.controller("invitedCtrl", function($scope, invited, inviteds){
+app.controller("invitedCtrl", function($scope, invited){
     
           
     $scope.inviteds = [];
@@ -8,6 +8,7 @@ app.controller("invitedCtrl", function($scope, invited, inviteds){
      $scope.amount = "";
      
     }
+
     
     
     
