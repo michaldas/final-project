@@ -1,4 +1,4 @@
-app.controller("taskListCtrl", function($scope, Task) {
+app.controller("taskListCtrl", function($scope, Task, tasks) {
   
   
     $scope.tasks = [new Task("cola", "2", completed = false),

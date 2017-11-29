@@ -10,20 +10,19 @@ app.factory("tasks", function(Task) {
     }
 
     function addTask(task) {
-        cars.push(task);
+        tasks.push(task);
     }
 
     function setTasks(tasksPlain) {
         tasks = [];
         for (var i = 0; i < tasksPlain.length; i++) {
-            cars.push(new Task(tasksPlain[i].item, tasksPlain[i].amount, 
-                tasksPlain[i].completed))
+            tasks.push(new Task(tasksPlain[i].item, tasksPlain[i].amount))
         }
     }
 
     return {
         getAll: getAll,
-        getMeetById: getTasktById,
+        getTaskById: getTaskById,
         addMeet: addTask,
         setMeets: setTasks
     }
