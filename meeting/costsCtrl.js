@@ -10,7 +10,13 @@ app.controller("costsCtrl", function($scope, Cost, costs){
      
     }
     
-    
+    $scope.sumCost = function() {
+        var sum = 0;
+        for( var i = 0; i<$scope.costs.length; i++){
+          sum = sum + parseInt ($scope.costs[i].amount);
+        }
+        return sum ;  
+        }
     
     
     

@@ -40,6 +40,7 @@
   <button class="btn btn-primary" ng-click="addTask()">Add Item</button>
   <button class="btn btn-primary" ng-click="clearCompleted()">Clear completed</button>
   <button class="btn btn-primary" ng-click="showCompleted()">display completed</button>
+  <p>Sum: {{sumTask()}}</p>
 </form>
 
 
@@ -54,7 +55,7 @@
         <input type="text" class="add-input" id="costelement" placeholder="Input text" ng-model="costelement" ng-model-instant>
         <label for="amount">Amount</label>
         <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="amount" ng-model-instant>
-        
+        <p>Costs: {{sumCost()}}</p>
         
     </div>
     <button type="submit" class="btn btn-primary" ng-click="addCost()">Create</button>
@@ -81,7 +82,8 @@
                 <button class="btn btn-primary" ng-click="addInvited()">Add Item</button>
                 <button class="btn btn-primary" ng-click="clearCompleted()">Clear completed</button>
                 <button class="btn btn-primary" ng-click="showCompleted()">display completed</button>
-              </form>   
+              </form>  
+              <p>Inviteds: {{sumInvited()}}</p> 
 </div>   
     
   
