@@ -12,8 +12,8 @@ app.factory("Meet" , function(){
 });
 
 
-//, tasks, costs, notifications, participants
+//, tasks, costs, notifications, invited
 // this.tasks = tasks;
 //this.costs = costs;
 //this.notifications = notifications;
-//this.participants = participants;
+//this.invited = invited;

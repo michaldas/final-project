@@ -67,6 +67,34 @@
    
 </div>
 
+<div ng-controller="inventedCtrl" >
+    
+  
+    <ul>
+        <li ng-repeat="invented in inventeds">
+           
+            <button class="clear-btn" ng-click="delete()">Delete</button>
+            <input type="checkbox" ng-model="invited.completed"/>
+            <span class="completed-{{invited.completed}}">{{invited.amount}} {{invited.item}}</span></li>
+    </ul>
+    <form  action="" method="POST" role="form" >
+            <legend>Add Inventeds</legend>
+    
+        <div class="form-group" >
+            <label for="name">Name</label>
+            <input type="text" class="add-input" id="name" placeholder="Input text" ng-model="name" ng-model-instant>
+            <label for="amount">Amount</label>
+            <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="amount" ng-model-instant>
+            
+            
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="addInvented()">Add Invented</button>
+        </form>
+        
+   
+</div>
+
+
 
 
     

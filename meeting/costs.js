@@ -16,7 +16,7 @@ app.factory("costs", function(Cost) {
     function setCosts(costsPlain) {
         costs = [];
         for (var i = 0; i < costsPlain.length; i++) {
-            costs.push(new Cost(costsPlain[i].costelement, meetsPlain[i].amount))
+            costs.push(new Cost(costsPlain[i].costelement, costsPlain[i].amount))
         }
     }
 
