@@ -2,20 +2,20 @@
 <div class="container text-center">    
         <h3>Events Gallery</h3><br>
         <div class="row">
-          <div class="well col-sm-4">
-                <div ng-repeat="meet in meetings">
-                       <h4>{{meet.title}}</h4>
-                       <h4>{{meet.date}}</h4>
+          
+                <div ng-repeat="meet in meetings" class = "well col-xs-12 col-sm-4 col-md-4 col-lg-4 gallery-item">
+                       <h3>{{meet.title}}</h3>
+                       <h4>When : {{meet.date}}</h4>
                        <h4>{{meet.time}}</h4>
-                       <h4>{{meet.location}}</h4>
+                       <h4>where : {{meet.location}}</h4>
                        <h4>{{meet.createdBy}}</h4>   
                        <h4>{{meet.meetId}}</h4>  
                        <button type="button" class="btn btn-default" ng-click="openDetails()">Details</button>    
                 </div>
                    
-        </div>
+         
             
-           
+        </div>   
           
         </div>
 </div><br>
