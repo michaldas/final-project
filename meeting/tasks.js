@@ -23,7 +23,7 @@ app.factory("tasks", function(Task) {
     return {
         getAll: getAll,
         getTaskById: getTaskById,
-        addMeet: addTask,
-        setMeets: setTasks
+        addTask: addTask,
+        setTask: setTasks
     }
 })
