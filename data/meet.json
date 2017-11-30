@@ -5,6 +5,7 @@
  "time" : "20:00",
  "location" : "Tel- Aviv",
  "createdBy": "mmm@mmm.com",
+ "meetId" : 7536,
  "tasks": [
      {
          "item" : "Bamba",

@@ -14,6 +14,14 @@ app.config(function($routeProvider) {
         templateUrl: "login/login.html",
         controller: "loginCtrl"
       })
+      
+      .when("/meet/:meetIndex", {
+        templateUrl: "meeting/meetDetails.html",
+        
+      })
+
+
+
     
     .otherwise({
       redirectTo: "/"
