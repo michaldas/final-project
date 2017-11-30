@@ -1,0 +1,50 @@
+[
+{
+ "title" : "80 Birthday Party" ,
+ "date" : "01/01/2018" ,
+ "time" : "20:00",
+ "location" : "Tel- Aviv",
+ "createdBy": "mmm@mmm.com",
+ "tasks": [
+     {
+         "item" : "Bamba",
+         "amount" :"5" ,
+         "completed" : false
+     },
+     {
+        "item" : "Baloon",
+        "amount" : "1",
+        "completed" : false
+    },
+    {
+        "item" : "Flowers",
+        "amount" : "20",
+        "completed" : false
+    }],
+    "costs": [
+        {
+            "costelement": "food",
+            "amount" : "500"
+        },
+        {
+            "costelement": "present",
+            "amount" : "200" 
+        }
+    ],
+    "invited" : [
+        {
+            "name" : "MAR",
+            "amount" : "4"
+        },
+        {
+            "name" : "Nir",
+            "amount" : "2"
+        }
+    ]
+ }] 
+    
+
+    
+
+
+

@@ -1,4 +1,4 @@
-app.controller("invitedCtrl", function($scope, Invited, inviteds){
+app.controller("invitedCtrl", function($scope, Invited, inviteds, Meet){
     
           
     $scope.inviteds = [];

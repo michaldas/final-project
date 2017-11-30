@@ -1,5 +1,5 @@
 
-app.controller("costsCtrl", function($scope, Cost, costs){
+app.controller("costsCtrl", function($scope, Cost, costs, Meet){
     
           
     $scope.costs = [];

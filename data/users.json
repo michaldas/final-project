@@ -12,6 +12,13 @@
         "firstName" : "MAR",
         "lastName" : "VVVV",
         "location" : "haifa"
+    },
+    {
+        "email" : "marina@mmm.com",
+        "password" : "123456",
+        "firstName" : "Marina",
+        "lastName" : "BBB",
+        "location" : "Tel-Aviv"
     }
 ]
    

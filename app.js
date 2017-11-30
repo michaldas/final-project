@@ -7,8 +7,8 @@ app.config(function($routeProvider) {
       
     })
     .when("/meet", {
-      templateUrl: "meeting/meet.html",
-      controller: "meetCtrl"
+      templateUrl: "meeting/meetingsGallery.html",
+      controller: "meetingsGalleryCtrl"
     })
     .when("/login", {
         templateUrl: "login/login.html",
