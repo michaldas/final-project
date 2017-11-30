@@ -7,7 +7,7 @@ app.controller("loginCtrl", function($scope, $location, $http, User, activeUser)
         }
     
         console.log(JSON.stringify($scope.users));
-    
+          
     
     });
    
@@ -30,6 +30,7 @@ app.controller("loginCtrl", function($scope, $location, $http, User, activeUser)
         }
     
         var getLoggedInUser = function() {
+            console.log ($scope.users[0]);
             for (var i = 0; i < $scope.users.length; i++) {
                console.log ($scope.users[i]);
                 if ($scope.users[i].email === $scope.email && $scope.users[i].password === $scope.password) {

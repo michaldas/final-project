@@ -5,6 +5,7 @@ app.factory("Meet" , function(){
        this.date = date;
        this.time = time;
        this.location = location;
+       this.meetId =Math.floor((Math.random() * 10000));
       // this.createdBy = createdBy;
     }
     return Meet;
