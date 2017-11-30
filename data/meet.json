@@ -42,7 +42,151 @@
             "amount" : "2"
         }
     ]
- }] 
+ },
+ {
+    "title" : "Picnic" ,
+    "date" : "10/12/2017" ,
+    "time" : "10:00",
+    "location" : "Jerusalem forest",
+    "createdBy": "marina@mmm.com",
+    "meetId" : 8514,
+    "tasks": [
+        {
+            "item" : "Picnic Map",
+            "amount" :"3" ,
+            "completed" : false
+        },
+        {
+           "item" : "water",
+           "amount" : "4",
+           "completed" : false
+       },
+       {
+           "item" : "Pie",
+           "amount" : "2",
+           "completed" : false
+       }],
+       "costs": [
+           {
+               "costelement": "food",
+               "amount" : "400"
+           }
+       ],
+       "invited" : [
+           {
+               "name" : "MAR",
+               "amount" : "5"
+           },
+           {
+               "name" : "Nir",
+               "amount" : "3"
+           },
+           {
+            "name" : "Marina",
+            "amount" : "3"
+        }
+       ]
+    },
+    {
+        "title" : "Hanuka Party" ,
+        "date" : "15/12/2017" ,
+        "time" : "19:00",
+        "location" : "Haifa",
+        "createdBy": "mmm@mmm.com",
+        "meetId" : 1468,
+        "tasks": [
+            {
+                "item" : "Candels",
+                "amount" :"9" ,
+                "completed" : false
+            },
+            {
+               "item" : "Latkes",
+               "amount" : "30",
+               "completed" : false
+           },
+           {
+               "item" : "wine",
+               "amount" : "7",
+               "completed" : false
+           }],
+           "costs": [
+           ],
+           "invited" : [
+               {
+                   "name" : "MAR",
+                   "amount" : "2"
+               },
+               {
+                   "name" : "Nir",
+                   "amount" : "4"
+               }
+           ]
+        },
+        {
+            "title" : "graduation ceremony" ,
+            "date" : "07/12/2017" ,
+            "time" : "09:00",
+            "location" : "Here",
+            "createdBy": "marina@mmm.com",
+            "meetId" : 5361,
+            "tasks": [
+                {
+                    "item" : "cake",
+                    "amount" :"2" ,
+                    "completed" : false
+                },
+                {
+                   "item" : "Diploma",
+                   "amount" : "20",
+                   "completed" : false
+               },
+               {
+                   "item" : "Flowers",
+                   "amount" : "1",
+                   "completed" : false
+               }],
+               "costs": [
+                   {
+                       "costelement": "food",
+                       "amount" : "400"
+                   },
+                   {
+                       "costelement": "present",
+                       "amount" : "200" 
+                   }
+               ],
+               "invited" : [
+                   {
+                       "name" : "MAR",
+                       "amount" : "4"
+                   },
+                   {
+                       "name" : "Nir",
+                       "amount" : "2"
+                   },
+                   {
+                    "name" : "Marina",
+                    "amount" : "1"
+                },
+                {
+                    "name" : "Michael",
+                    "amount" : "1"
+                }
+
+               ]
+            }
+           
+       
+   
+
+
+
+
+
+
+
+] 
     
 
     
