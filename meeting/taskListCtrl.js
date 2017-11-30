@@ -33,7 +33,16 @@ app.controller("taskListCtrl", function($scope, Task, tasks, Meet) {
         if (x.completed) $scope.tasks.push(x);
       });
     }
+<<<<<<< HEAD
 
+=======
+ 
+
+ 
+  console.log($scope.tasks.length);
+ 
+
+>>>>>>> 392397039ef9fd73d5b1befde2f064c9dfd4e7f9
   
   $scope.sumTask = function() {
     var sum = 0;
