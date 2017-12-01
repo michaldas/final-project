@@ -2,6 +2,6 @@ app.controller("meetDetailsCtrl", function ($scope, Meet, meetings, activeUser, 
     $scope.meetings = []; 
     
     $scope.meeting = new Meet(meetings.get($routeParams.meetIndex));
-    console.log($scope.meeting);
+    console.log($routeParams.meetIndex);
 });
 

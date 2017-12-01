@@ -18,8 +18,8 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
     function setMeets(meetsPlain) {
         meetings = [];
         for (var i = 0; i < meetsPlain.length; i++) {
-            var meeting = new Meet(meetsPlain[i].title, meetsPlain[i].date, meetsPlain[i].meetId,
-                meetsPlain[i].time, meetsPlain[i].location, meetsPlain[i].createdBy);
+            var meeting = new Meet(meetsPlain[i].title, meetsPlain[i].date, 
+                meetsPlain[i].time, meetsPlain[i].location, meetsPlain[i].createdBy,  meetsPlain[i].meetId);
             for (var j = 0; j < meetsPlain[i].tasks.length; j++) {
                 var task = new Task(meetsPlain[i].tasks[j].item, meetsPlain[i].tasks[j].amount,
                     meetsPlain[i].tasks[j].completed);
