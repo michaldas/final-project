@@ -1,4 +1,4 @@
-app.controller("meetingsGalleryCtrl", function ($scope, meetings, $http, $log, $routeParams) {
+app.controller("meetingsGalleryCtrl", function ($scope, meetings, $http, $log, $routeParams, $location) {
     
         // Read once data from json
         // When getting the reply from http load (set the data) to the meetings service
@@ -31,10 +31,10 @@ app.controller("meetingsGalleryCtrl", function ($scope, meetings, $http, $log, $
 
 //console.log("start meetDetails Controller " + $routeParams.index);
 // $scope.meeting = meetings.getMeetById($routeParams.index);  
-/* $scope.openDetails = function (meet) {       
-        var meetIndex = $scope.meeting.indexOf(meet);       
-        $location.path("/meet/" + meetIndex)
-    }*/
+ $scope.openDetails = function (index) {       
+       // var meetIndex = $scope.meeting.indexOf(meet);       
+        $location.path("/meet/" + index)
+    }
            
 
 }) 
