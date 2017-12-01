@@ -29,11 +29,12 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
                 var cost = new Cost(meetsPlain[i].costs[a].costelement, meetsPlain[i].costs[a].amount);
                 meeting.addCost(cost);
             }
-            /*for (var x = 0; x< meetsPlain[i].inviteds.length; x++){
-                var invited = new Invited(meetsPlain[i].inviteds[x].item, meetsPlain[i].Invited[x].amount,
+            console.log(meetsPlain[i].inviteds.length)
+          for (var x = 0; x < meetsPlain[i].inviteds.length; x++){
+                var invited = new Invited(meetsPlain[i].inviteds[x].name, meetsPlain[i].inviteds[x].amount,
                     meetsPlain[i].inviteds[x].completed);
-                meeting.Invited(Invited);
-            }*/
+                meeting.addInvited(invited);
+            }
     
         meetings.push(meeting);
    
