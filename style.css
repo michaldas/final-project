@@ -6,3 +6,7 @@ li {
     text-decoration: line-through;
     color: grey;
   }
+.gallery-item{
+  margin-right:5px ;
+  padding: 14px;
+}

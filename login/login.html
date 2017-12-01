@@ -1,5 +1,5 @@
 
-    <div class="login container" ng-controller="loginCtrl">
+    <div class="well login container" ng-controller="loginCtrl">
       <form action="" method="POST" role="form">
         <div class="alert alert-danger" ng-show="failedAttempt">
           Invalid email or password
@@ -14,14 +14,14 @@
             <input type="password" class="form-control" id="password" placeholder="Input password" ng-model="password">
          </div>
                     
-           <div class="checkbox">
+         <!--  <div class="checkbox">
             <label>
              <input type="checkbox" value="" ng-model="check">
              Important
             </label>
-           </div>
+           </div>-->
            
-            <button type="submit" class="btn btn-primary" ng-click="login()">Submit</button>
+            <button type="submit" class="btn btn-primary " ng-click="login()"><span class="glyphicon glyphicon-log-in  "></span> Submit</button>
             </form>
 
             

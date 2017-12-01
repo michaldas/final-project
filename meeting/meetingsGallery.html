@@ -1,7 +1,32 @@
 
+<div class="container text-center">    
+        <h3>Events Gallery</h3><br>
+        <div class="row">
+          
+                <div ng-repeat="meet in meetings" class = "well col-xs-12 col-sm-4 col-md-4 col-lg-4 gallery-item">
+                       <h3>{{meet.title}}</h3>
+                       <h4>When : {{meet.date}}</h4>
+                       <h4>{{meet.time}}</h4>
+                       <h4>where : {{meet.location}}</h4>
+                       <h4>{{meet.createdBy}}</h4>   
+                       <h4>{{meet.meetId}}</h4>  
+                       <button type="button" class="btn btn-default" ng-click="openDetails()">Details</button>    
+                </div>
+                   
+         
+            
+        </div>   
+          
+        </div>
+</div><br>
+      
+      <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+      </footer>
 
 
 
+<<<<<<< HEAD
 <div class="container">
      <h1>meetingsGallerykdkdkdk</h1>
 
@@ -18,5 +43,7 @@
        
      
 </div>
+=======
+>>>>>>> 2a7086ffeb98086b305ddce451cdda6afa34ead7
 
 
