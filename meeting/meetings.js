@@ -12,7 +12,9 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
     function addMeet(meet) {
         meetings.push(meet);
     }
-
+    var get = function(index) {
+        return meetings[index];
+    }
     function setMeets(meetsPlain) {
         meetings = [];
         for (var i = 0; i < meetsPlain.length; i++) {
@@ -42,7 +44,8 @@ return {
     getAll: getAll,
     getMeetById: getMeetById,
     addMeet: addMeet,
-    setMeets: setMeets
+    setMeets: setMeets,
+    get: get
     }
 
 })
