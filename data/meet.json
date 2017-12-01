@@ -35,11 +35,13 @@
     "inviteds" : [
         {
             "name" : "MAR",
-            "amount" : "4"
+            "amount" : 4,
+            "completed" : false
         },
         {
             "name" : "Nir",
-            "amount" : 2
+            "amount" : 2,
+            "completed" : false
         }
     ]
  },
@@ -75,15 +77,18 @@
        "invited" : [
            {
                "name" : "MAR",
-               "amount" : 5
+               "amount" : 5,
+               "completed" : false
            },
            {
                "name" : "Nir",
-               "amount" : 3
+               "amount" : 3,
+               "completed" : false
            },
            {
             "name" : "Marina",
-            "amount" : 3
+            "amount" : 3,
+            "completed" : false
         }
        ]
     },
