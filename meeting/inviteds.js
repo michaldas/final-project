@@ -5,15 +5,15 @@ app.factory("inviteds", function(Invited) {
         return inviteds;
     }
 
-    function getCostById(index) {
+    function getInvitedById(index) {
         return inviteds[index];
     }
 
-    function addCost(invited) {
+    function addInvited(invited) {
         inviteds.push(invited);
     }
 
-    function setCosts(invitedsPlain) {
+    function setInviteds(invitedsPlain) {
         inviteds = [];
         for (var i = 0; i < invitedsPlain.length; i++) {
             inviteds.push(new Invited(invitedsPlain[i].name, invitedsPlain[i].amount))
@@ -22,8 +22,8 @@ app.factory("inviteds", function(Invited) {
 
     return {
         getAll: getAll,
-        getMeetById: getCostById,
-        addMeet: addCost,
-        setMeets: setCosts
+        getInvitedById: getInvitedById,
+        addInvited: addInvited,
+        setInviteds: setInviteds
     }
 })

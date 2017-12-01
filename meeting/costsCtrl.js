@@ -3,7 +3,7 @@ app.controller("costsCtrl", function($scope, Cost, costs, Meet){
     
           
     $scope.costs = [];
-    $scope.addCost = function(){
+    $scope.addCost1 = function(){
      $scope.costs.push(new Cost( $scope.costelement, $scope.amount));
      $scope.costelement = "";
      $scope.amount = "";

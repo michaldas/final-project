@@ -24,6 +24,6 @@ app.factory("tasks", function(Task) {
         getAll: getAll,
         getTaskById: getTaskById,
         addTask: addTask,
-        setTask: setTasks
+        setTasks: setTasks
     }
 })

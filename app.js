@@ -17,6 +17,7 @@ app.config(function($routeProvider) {
       
       .when("/meet/:meetIndex", {
         templateUrl: "meeting/meetDetails.html",
+        controller: "meetingsGalleryCtrl"
         
       })
 

@@ -9,37 +9,37 @@
  "tasks": [
      {
          "item" : "Bamba",
-         "amount" :"5" ,
+         "amount" :5 ,
          "completed" : false
      },
      {
         "item" : "Baloon",
-        "amount" : "1",
+        "amount" : 1,
         "completed" : false
     },
     {
         "item" : "Flowers",
-        "amount" : "20",
+        "amount" : 20,
         "completed" : false
     }],
     "costs": [
         {
             "costelement": "food",
-            "amount" : "500"
+            "amount" : 500
         },
         {
             "costelement": "present",
-            "amount" : "200" 
+            "amount" : 200
         }
     ],
-    "invited" : [
+    "inviteds" : [
         {
             "name" : "MAR",
             "amount" : "4"
         },
         {
             "name" : "Nir",
-            "amount" : "2"
+            "amount" : 2
         }
     ]
  },
@@ -53,37 +53,37 @@
     "tasks": [
         {
             "item" : "Picnic Map",
-            "amount" :"3" ,
+            "amount" :3 ,
             "completed" : false
         },
         {
            "item" : "water",
-           "amount" : "4",
+           "amount" : 4,
            "completed" : false
        },
        {
            "item" : "Pie",
-           "amount" : "2",
+           "amount" : 2,
            "completed" : false
        }],
        "costs": [
            {
                "costelement": "food",
-               "amount" : "400"
+               "amount" : 400
            }
        ],
        "invited" : [
            {
                "name" : "MAR",
-               "amount" : "5"
+               "amount" : 5
            },
            {
                "name" : "Nir",
-               "amount" : "3"
+               "amount" : 3
            },
            {
             "name" : "Marina",
-            "amount" : "3"
+            "amount" : 3
         }
        ]
     },
@@ -97,29 +97,31 @@
         "tasks": [
             {
                 "item" : "Candels",
-                "amount" :"9" ,
+                "amount" :9 ,
                 "completed" : false
             },
             {
                "item" : "Latkes",
-               "amount" : "30",
+               "amount" : 30,
                "completed" : false
            },
            {
                "item" : "wine",
-               "amount" : "7",
+               "amount" : 7,
                "completed" : false
            }],
            "costs": [
            ],
-           "invited" : [
+           "inviteds" : [
                {
                    "name" : "MAR",
-                   "amount" : "2"
+                   "amount" : 2,
+                   "completed" : false
                },
                {
                    "name" : "Nir",
-                   "amount" : "4"
+                   "amount" : 4,
+                   "completed" : false
                }
            ]
         },
@@ -133,45 +135,49 @@
             "tasks": [
                 {
                     "item" : "cake",
-                    "amount" :"2" ,
+                    "amount" :2 ,
                     "completed" : false
                 },
                 {
                    "item" : "Diploma",
-                   "amount" : "20",
+                   "amount" : 20,
                    "completed" : false
                },
                {
                    "item" : "Flowers",
-                   "amount" : "1",
+                   "amount" : 1,
                    "completed" : false
                }],
                "costs": [
                    {
                        "costelement": "food",
-                       "amount" : "400"
+                       "amount" : 400
                    },
                    {
                        "costelement": "present",
-                       "amount" : "200" 
+                       "amount" : 200 
                    }
                ],
-               "invited" : [
+               "inviteds" : [
                    {
                        "name" : "MAR",
-                       "amount" : "4"
+                       "amount" : 4,
+                       "completed" : false
                    },
                    {
                        "name" : "Nir",
-                       "amount" : "2"
+                       "amount" : 2,
+                       "completed" : false
                    },
                    {
                     "name" : "Marina",
-                    "amount" : "1"
+                    "amount" : 1,
+                    "completed" : false
                 },
                 {
                     "name" : "Michael",
-                    "amount" : "1"
+                    "amount" : 1,
+                    "completed" : false
                 }
 
                ]

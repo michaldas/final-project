@@ -9,7 +9,7 @@ app.factory("costs", function(Cost) {
         return costs[index];
     }
 
-    function addCost(cost) {
+    function addCost(costelement) {
         costs.push(cost);
     }
 
@@ -22,8 +22,8 @@ app.factory("costs", function(Cost) {
 
     return {
         getAll: getAll,
-        getMeetById: getCostById,
-        addMeet: addCost,
-        setMeets: setCosts
+        getCostById: getCostById,
+        addCost: addCost,
+        setCosts: setCosts
     }
 })

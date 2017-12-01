@@ -1,8 +1,14 @@
 app.factory("Invited" , function(){
-    function Invited(name, amount, completed = false) {
+    function Invited(name, amount, completed) {
       this.name = name;
       this.amount = amount;
-      this.completed = false;
+      if (completed === undefined) {
+        this.completed = false;
+      }
+      else {
+        this.completed = completed;
+      }
+      
     }
     return Invited;
   });

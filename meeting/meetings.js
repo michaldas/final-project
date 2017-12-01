@@ -23,26 +23,25 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
                     meetsPlain[i].tasks[j].completed);
                 meeting.addTask(task);
             }
-            for (var k = 0; k < meetsPlain[k].costs.length; k++) {
-                var cost = new Cost(meetsPlain[i].costs[k].costelement, meetsPlain[i].costs[k].amount);                   ;
+            for (var a = 0; a < meetsPlain[i].costs.length; a++) {
+                var cost = new Cost(meetsPlain[i].costs[a].costelement, meetsPlain[i].costs[a].amount);
                 meeting.addCost(cost);
             }
-            for (var l = 0; l < meetsPlain[i].inviteds.length; l++) {
-                var invited = new Invited(meetsPlain[i].inviteds[l].name, meetsPlain[i].inviteds[l].amount);                   ;
-                meeting.addInvited(invited);
-            }    
-            mettings.push(meeting);    
-            
-                 
-        }
+            /*for (var x = 0; x< meetsPlain[i].inviteds.length; x++){
+                var invited = new Invited(meetsPlain[i].inviteds[x].item, meetsPlain[i].Invited[x].amount,
+                    meetsPlain[i].inviteds[x].completed);
+                meeting.Invited(Invited);
+            }*/
     
-
+        meetings.push(meeting);
    
 }
+}    
 return {
     getAll: getAll,
     getMeetById: getMeetById,
     addMeet: addMeet,
     setMeets: setMeets
-}
+    }
+
 })

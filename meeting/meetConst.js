@@ -9,12 +9,18 @@ app.factory("Meet" , function(){
        this.meetId =Math.floor((Math.random() * 10000));
       // this.createdBy = user.email;
        this.tasks = [];
-       /*this.costs = [];
-       this.invited =[];*/
+       this.costs = [];
+       this.inviteds = [];
 
        this.addTask = function(task) {
            this.tasks.push(task);
        }
+       this.addCost = function(cost) {
+        this.costs.push(cost);
+    }
+        this.addInvited = function(invited) {
+         this.inviteds.push(invited);
+    }
 
      //  this.removeTask = function(task){
      //   this.tasks.splice(this.$index, 1);
