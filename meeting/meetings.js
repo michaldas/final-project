@@ -5,9 +5,9 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
         return meetings;
     }
 
-    function getMeetById(index) {
-        return meetings[index];
-    }
+  //  function getMeetById(index) {
+  //      return meetings[index];
+   // }
 
     function addMeet(meet) {
         meetings.push(meet);
@@ -29,12 +29,12 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
                 var cost = new Cost(meetsPlain[i].costs[a].costelement, meetsPlain[i].costs[a].amount);
                 meeting.addCost(cost);
             }
-            console.log(meetsPlain[i].inviteds.length)
+          /*  console.log(meetsPlain[i].inviteds.length)
           for (var x = 0; x < meetsPlain[i].inviteds.length; x++){
                 var invited = new Invited(meetsPlain[i].inviteds[x].name, meetsPlain[i].inviteds[x].amount,
                     meetsPlain[i].inviteds[x].completed);
                 meeting.addInvited(invited);
-            }
+            }*/
     
         meetings.push(meeting);
    
@@ -42,7 +42,7 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
 }    
 return {
     getAll: getAll,
-    getMeetById: getMeetById,
+   // getMeetById: getMeetById,
     addMeet: addMeet,
     setMeets: setMeets,
     get: get
