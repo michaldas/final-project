@@ -15,8 +15,9 @@ app.controller("newEventCtrl", function ($scope, $location, meetings, activeUser
         $scope.create = function () {
             var newMeet = new Meet($scope.title, $scope.date, $scope.time, $scope.location);
             meetings.addMeet(newMeet);
+            var meets = meetings.getAll();
           //  $location.path("/meet/" + meetings.getAll().length - 1);
-          $location.path("/meet/" + 4 );
+          $location.path("/meet/" + (meets.length -1) );
         }
     });
     
