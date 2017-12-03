@@ -22,7 +22,9 @@ app.controller("meetingsGalleryCtrl", function ($scope, meetings, $http, $log, $
         $location.path("/meet/" + index)
     }
            
-
+$scope.newEvent = function () {
+    $location.path("/new");
+}
 }); 
 
 //function myError(response) {
