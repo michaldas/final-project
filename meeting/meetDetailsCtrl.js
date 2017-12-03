@@ -1,4 +1,4 @@
-app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task) {
+app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task, Cost) {
  //   $scope.meetings = []; 
     
     $scope.meet = meetings.get($routeParams.meetIndex);
@@ -31,14 +31,18 @@ app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $rout
           if (x.completed) $scope.meet.tasks.push(x);
         });
       }
- /* for (var index = 0; index < mee.length; index++) {
-      var element = array[index];
-   this.removeTask = function() {
-        $scope.tasks.splice(this.$index, 1); 
-        
       
-  }*/
- //  $scope.task =  getTask(index);
+      $scope.addCost = function addCost() {
+       var cost = new cost(costelement = $scope.formCostelement, amount = $scope.formAmount) ;
+       $scope.meet.addCost(cost);
+       $scope.formCostelement = "";
+       $scope.formAmount = "";
+   }
+   $scope.removeCost = function() {
+       $scope.meet.costs.splice(this.$index, 1); 
+   }
+
+   
      
  
     

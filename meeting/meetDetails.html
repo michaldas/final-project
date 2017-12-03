@@ -32,9 +32,8 @@
                             
                </div>
                <div>
-                        <h4>{{meet.costs}}</h4> 
-                         <h1>Costs</h1>
-           <ul>
+                 <h1>Costs</h1>
+                <ul>
                <li ng-repeat="cost in meet.costs">
                  <button class="clear-btn" ng-click="removeCost()">Delete</button>  
                  <span>{{cost.costelement}} {{cost.amount}}</span>
@@ -42,17 +41,15 @@
                </ul>
                 <div>
                  <form  action="" method="POST" role="form" >
-                        <legend>Add Costs</legend>
-                                        
+                                                                
                          <div class="form-group" >
-                         <label for="costelement">Costelement</label>
-                         <input type="text" class="add-input" id="costelement" placeholder="Input text" ng-model="costelement" >
-                        <label for="amount">Amount</label>
-                        <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="amount" >
+                         <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" >
+                        <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="formAmount" > 
+                        <button type="submit" class="btn btn-primary" ng-click="addCost()">Add cost</button>
                         <p>Costs: {{sumCost()}}</p>
                                                 
                         </div>
-                        <button type="submit" class="btn btn-primary" ng-click="addCost1()">Create</button>
+                       
 
                </div>
 
