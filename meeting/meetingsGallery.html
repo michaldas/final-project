@@ -1,6 +1,7 @@
 
 <div class="container text-center">    
         <h3>Events Gallery</h3><br>
+        <button class="btn btn-primary"  ng-href= "#!/new" >New Event</button> 
         <div class="row">
           
                 <div ng-repeat="meet in meetings" class = "well col-xs-12 col-sm-4 col-md-4 col-lg-4 gallery-item">
@@ -12,7 +13,7 @@
                        <h4>{{meet.meetId}}</h4>  
                        <button type="button" class="btn btn-default" ng-click="openDetails($index)">Details</button>    
                 </div>
-                <button class="btn btn-primary" ng-href="#!/New">Create New Event </button>  
+                
          
             
         </div>   

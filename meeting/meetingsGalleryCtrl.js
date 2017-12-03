@@ -10,7 +10,7 @@ app.controller("meetingsGalleryCtrl", function ($scope, meetings, $http, $log, $
     $scope.meetings = meetings.getAll(); 
     console.log($scope.meetings);                                                        
 },  function myError(response) {
-    console.log("error open file actors.json");
+    console.log("error open file meet.json");
 });
 
  $scope.openDetails = function (index) {       
