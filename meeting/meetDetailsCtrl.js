@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task, Cost) {
+=======
+app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task, $location) {
+>>>>>>> 99393ceb6c906a0b85e3eeb6457a0edfb8472a18
  //   $scope.meetings = []; 
     
     $scope.meet = meetings.get($routeParams.meetIndex);
@@ -31,6 +35,7 @@ app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $rout
           if (x.completed) $scope.meet.tasks.push(x);
         });
       }
+<<<<<<< HEAD
       
       $scope.addCost = function addCost() {
        var cost = new cost(costelement = $scope.formCostelement, amount = $scope.formAmount) ;
@@ -44,6 +49,11 @@ app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $rout
 
    
      
+=======
+      $scope.update = function(){
+        $location.path("/meet");
+      }
+>>>>>>> 99393ceb6c906a0b85e3eeb6457a0edfb8472a18
  
     
 });
