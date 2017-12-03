@@ -14,7 +14,7 @@
                 <h1>Tasks</h1>
            <ul>
                <li ng-repeat="task in meet.tasks">
-                 <button class="clear-btn" ng-click="delete()">Delete</button>  
+                 <button class="clear-btn" ng-click="removeTask()">Delete</button>  
                  <input type="checkbox" ng-model="task.completed"/>
                  <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
                </li>

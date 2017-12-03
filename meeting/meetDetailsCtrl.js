@@ -11,16 +11,17 @@ app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $rout
         $scope.formTaskItem = "";
         $scope.formTaskAmount = "";
     }
+    $scope.removeTask = function() {
+        $scope.meet.tasks.splice(this.$index, 1); 
+    }
+
     
  /* for (var index = 0; index < mee.length; index++) {
       var element = array[index];
+   this.removeTask = function() {
+        $scope.tasks.splice(this.$index, 1); 
+        
       
-      
-$scope.tasks.push(new Task(item = $scope.formTaskItem, amount = $scope.formTaskAmount, completed = false));
-      $scope.formTaskItem = "";
-      $scope.formTaskAmount = "";
-
-
   }*/
  //  $scope.task =  getTask(index);
      
