@@ -15,6 +15,7 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
     var get = function(index) {
         return meetings[index];
     }
+    
     function setMeets(meetsPlain) {
         meetings = [];
         for (var i = 0; i < meetsPlain.length; i++) {
@@ -29,12 +30,12 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
                 var cost = new Cost(meetsPlain[i].costs[a].costelement, meetsPlain[i].costs[a].amount);
                 meeting.addCost(cost);
             }
-          /*  console.log(meetsPlain[i].inviteds.length)
+            console.log(meetsPlain[i].inviteds.length)
           for (var x = 0; x < meetsPlain[i].inviteds.length; x++){
                 var invited = new Invited(meetsPlain[i].inviteds[x].name, meetsPlain[i].inviteds[x].amount,
                     meetsPlain[i].inviteds[x].completed);
                 meeting.addInvited(invited);
-            }*/
+            }
     
         meetings.push(meeting);
    
@@ -46,6 +47,7 @@ return {
     addMeet: addMeet,
     setMeets: setMeets,
     get: get
+   
     }
 
 })

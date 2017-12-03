@@ -1,10 +1,10 @@
 app.controller("taskListCtrl", function($scope, Task, tasks, Meet) {
   
   
-    $scope.tasks = [new Task("cola", "2", completed = false),
+ /*   $scope.tasks = [new Task("cola", "2", completed = false),
       new Task("water", "4", completed = false),
       new Task("wine", "1", completed = false),
-    ];
+    ];*/
   
     $scope.addTask = function() {
       // create task object: var task = new Task($scope.taskItem, $scope)
