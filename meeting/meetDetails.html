@@ -14,21 +14,13 @@
                 <h1>Tasks</h1>
            <ul>
                <li ng-repeat="task in meet.tasks">
-                 <button class="clear-btn" ng-click="delete()">Delete</button>  
+                 <button class="clear-btn" ng-click="removeTask()">Delete</button>  
                  <input type="checkbox" ng-model="task.completed"/>
                  <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
                </li>
                </ul>
                 <div>
-               <!--       <div ng-controller="taskListCtrl">
-                               
-                                <ul>
-                              
-                              <li ng-repeat= "task in tasks">
-                                <button class="clear-btn" ng-click="delete()">Delete</button>
-                                <input type="checkbox" ng-model="task.completed"/>
-                                 <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span></li>
-                            </ul>-->
+              
                             <form>
                               <input class="add-input" placeholder="New Item..." type="text" ng-model="formTaskItem" />
                               <input class="add-input" placeholder="Amount" type="number" ng-model="formTaskAmount"  />
@@ -41,6 +33,13 @@
                </div>
                <div>
                         <h4>{{meet.costs}}</h4>  
+
+
+
+
+
+
+
                </div>
 
                <div>
