@@ -1,8 +1,8 @@
 
 
 <div class="container">
-        <h1>Meet Details</h1>
-   
+        <h2>Event Details</h2>
+        <button type="button" class="btn btn-danger" ng-click="update()">update</button>
         <div >
                 <h4>{{meet.title}}</h4>
                <h4>{{meet.date}}</h4>
@@ -11,7 +11,7 @@
                <h4>{{meet.createdBy}}</h4>
         </div>      
                <div>
-                <h1>Tasks</h1>
+                <h3>Tasks</h3>
            <ul>
                <li ng-repeat="task in meet.tasks">
                  <button class="clear-btn" ng-click="removeTask()">Delete</button>  
@@ -19,9 +19,6 @@
                  <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
                </li>
                </ul>
-               
-               <button type="button" class="btn btn-danger" ng-click="update()">update</button>
-               
                 <div>
               
                             <form>
@@ -32,10 +29,32 @@
                               <button class="btn btn-primary" ng-click="showCompleted()">display completed</button>
                               
                             </form>
-                            
+                          
                </div>
                <div>
-                 <h1>Costs</h1>
+                        <h3>Inviteds</h3>
+                   <ul>
+                       <li ng-repeat="invited in meet.inviteds">
+                         <button class="clear-btn" ng-click="removeInvited()">Delete</button>  
+                         <input type="checkbox" ng-model="invited.completed"/>
+                         <span class="completed-{{invited.completed}}">{{invited.name}} {{invited.amount}}</span>
+                       </li>
+                       </ul>
+                        <div>
+                      
+                         <form>
+                        <input class="add-input" placeholder="name" type="text" ng-model="formInvitedName" />
+                        <input class="add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount"  />
+                         <button class="btn btn-primary" ng-click="addInvited()"> invite</button>
+                          <button class="btn btn-primary" ng-click="clearCompleted()">Clear completed</button>
+                        <button class="btn btn-primary" ng-click="showCompleted()">display completed</button>
+                           <p>Total :{{sumInvited()}}</p>           
+                        </form>
+                                  
+                       </div>
+               
+               <div>
+                 <h3>Costs</h3>
                 <ul>
                <li ng-repeat="cost in meet.costs">
                  <button class="clear-btn" ng-click="removeCost()">Delete</button>  
@@ -49,19 +68,12 @@
                          <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" >
                         <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="formAmount" > 
                         <button type="submit" class="btn btn-primary" ng-click="addCost()">Add cost</button>
-                        <p>Costs: {{sumCost()}}</p>
+                        <p>Total Costs: {{sumCost()}}</p>
                                                 
                         </div>
                        
 
                </div>
-
-               <div>
-                        <h4>{{meet.inviteds}}</h4> 
-               </div>
-               
-          
-           
            
    </div>
    
