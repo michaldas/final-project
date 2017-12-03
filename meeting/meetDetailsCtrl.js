@@ -16,6 +16,21 @@ app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $rout
     }
 
     
+
+    $scope.clearCompleted = function() {
+        var oldList = $scope.meet.tasks;
+        $scope.meet.tasks = [];
+        angular.forEach(oldList, function(x) {
+          if (!x.completed) $scope.meet.tasks.push(x);
+        });
+      }
+       $scope.showCompleted = function() {
+        var oldList = $scope.meet.tasks;
+        $scope.meet.tasks = [];
+        angular.forEach(oldList, function(x) {
+          if (x.completed) $scope.meet.tasks.push(x);
+        });
+      }
  /* for (var index = 0; index < mee.length; index++) {
       var element = array[index];
    this.removeTask = function() {
