@@ -5,9 +5,7 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
         return meetings;
     }
 
-  //  function getMeetById(index) {
-  //      return meetings[index];
-   // }
+  
 
     function addMeet(meet) {
         meetings.push(meet);
@@ -43,7 +41,6 @@ app.factory("meetings", function(Meet, Task, Cost, Invited) {
 }    
 return {
     getAll: getAll,
-   // getMeetById: getMeetById,
     addMeet: addMeet,
     setMeets: setMeets,
     get: get

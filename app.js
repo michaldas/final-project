@@ -21,7 +21,10 @@ app.config(function($routeProvider) {
         
       })
 
-
+      .when("/new", {
+        templateUrl: "meeting/newEvent.html",
+        controller: "newEventCtrl"
+      })
 
     
     .otherwise({

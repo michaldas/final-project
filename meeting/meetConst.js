@@ -31,8 +31,16 @@ app.factory("Meet" , function(){
     }   
     this.getInvited = function(index) {
         return this.inviteds[index];
-    }     
+    }   
+    this.removeTask = function() {
+        $scope.tasks.splice(this.$index, 1);
+      }  
+      this.removeCost = function() {
+        $scope.costs.splice(this.$index, 1);
+      }  
+      this.removeInvited = function() {
+        $scope.inviteds.splice(this.$index, 1);
+      }  
     return Meet;
-   //  this.removeTask = function(task){
-     //   this.tasks.splice(this.$index, 1); 
+   
 });
