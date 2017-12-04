@@ -1,19 +1,20 @@
 
 
 <div class="container">
-        <h2>Event Details</h2> 
+  <div >
+     <h2>{{meet.title}}</h2> 
       <!--  <p>{{isManager()}}</p>-->
-        <button type="button" class="btn btn-danger" ng-click="update()">update</button>
-        <button type="button" class="btn btn-danger" ng-click="notComming ()" ng-show="isInvited()" >Not Comming</button>
-        <button  class="btn btn-danger" ng-click="comming()"  ng-show="isInvited()" >Comming</button>
-        <div >
-                <h4>{{meet.title}}</h4>
-               <h4>{{meet.date}}</h4>
-               <h4>{{meet.time}}</h4>
-               <h4>{{meet.location}}</h4>
-               <h4>{{meet.createdBy}}</h4>
-        </div> 
-      <div class = "confirm"  >
+              <h4>Event details:</h4>
+               <h4>Date:{{meet.date}} Time: {{meet.time}}</h4>
+               <h4>Where: {{meet.location}}</h4>
+               <h4>Created by:{{meet.createdBy}}</h4>
+       </div>
+      <div>
+       <button type="button" class="btn btn-danger" ng-click="update()">update</button>
+       <button type="button" class="btn btn-danger" ng-click="notComming ()" ng-show="isInvited()" >Not Comming</button>
+       <button  class="btn btn-danger" ng-click="comming()"  ng-show="isInvited()" >Comming</button>
+      </div>
+      <div class = "hide" id = "confirm" >
         <h3>confirmation</h3>
         
                 <form>
@@ -31,7 +32,11 @@
                   
                 </form>
       </div>
-               <div>
+</div>
+      <div class="container">    
+        
+        <div class="row">
+          <div class="col-sm-4">
                 <h3>Tasks</h3>
            <ul>
                <li ng-repeat="task in meet.tasks">
@@ -52,7 +57,8 @@
                             </form>
                           
                </div>
-               <div>
+              </div>
+               <div  class="col-sm-4">
                         <h3>Inviteds</h3>
                    <ul>
                        <li ng-repeat="invited in meet.inviteds">
@@ -67,14 +73,15 @@
                         <input class="add-input" placeholder="name" type="text" ng-model="formInvitedName" ng-disabled="isNotManager()" />
                         <input class="add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount" ng-disabled="isNotManager()"  />
                          <button class="btn btn-primary" ng-click="addInvited()" ng-disabled="isNotManager()"> invite</button>
-                          <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()">Clear completed</button>
+                         <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()">Clear completed</button>
                         <button class="btn btn-primary" ng-click="showCompleted()" ng-disabled="isNotManager()">display completed</button>
                            <p>Total :{{sumInvited()}}</p>           
                         </form>
                                   
-                       </div>
+                      </div>
+              </div>
                
-               <div>
+               <div  class="col-sm-4">
                  <h3>Costs</h3>
                 <ul>
                <li ng-repeat="cost in meet.costs">
@@ -95,7 +102,7 @@
                        
 
                </div>
-           
+       </div>    
    </div>
    
    

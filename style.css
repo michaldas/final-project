@@ -10,3 +10,9 @@ li {
   margin-right:5px ;
   padding: 14px;
 }
+.hide{
+  display : none;
+}
+.show{
+  display: inline;
+}

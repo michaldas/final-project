@@ -135,11 +135,19 @@ $scope.confirm = function(){
   if($scope.user.lastName === $scope.meet.inviteds[i].name) {
     $scope.meet.inviteds[i].amount = $scope.formInvitedConfirm;
     $scope.meet.inviteds[i].completed = true;
+    var element = document.getElementById("confirm");
+    element.classList.toggle("hide");
 }
 }
 }
 $scope.comming = function(){
-  $location.path("/confirmation");
+  var element = document.getElementById("confirm");
+  element.classList.remove("hide");
+ // element.classList.toggle("show");
 }
+
+
+
+
 });
 
