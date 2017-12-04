@@ -5,7 +5,9 @@ app.controller("newEventCtrl", function ($scope, $location, meetings, activeUser
             $location.path("/");
             return;
         }*/
-    
+    $scope.user = activeUser.get();
+   // alert(JSON.stringify($scope.user.email));
+
         $scope.meet = new Meet({});
     
         $scope.cancel = function () {
@@ -13,11 +15,13 @@ app.controller("newEventCtrl", function ($scope, $location, meetings, activeUser
         }
     
         $scope.create = function () {
-            var newMeet = new Meet($scope.title, $scope.date, $scope.time, $scope.location);
+            var newMeet = new Meet(title = $scope.title, date = $scope.date, time = $scope.time, location =  $scope.location, createdBy = $scope.user.email);
             meetings.addMeet(newMeet);
             var meets = meetings.getAll();
           //  $location.path("/meet/" + meetings.getAll().length - 1);
           $location.path("/meet/" + (meets.length -1) );
         }
+
+        
     });
     

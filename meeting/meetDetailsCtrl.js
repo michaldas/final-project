@@ -1,6 +1,8 @@
 app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task, $location, Cost, Invited ) {
  //   $scope.meetings = []; 
-    
+ $scope.user = activeUser.get();
+ // alert(JSON.stringify($scope.user.email));
+
     $scope.meet = meetings.get($routeParams.meetIndex);
 
 //Tasks
@@ -85,7 +87,18 @@ $scope.clearCompleted = function() {
       $scope.update = function(){
         $location.path("/meet");
       }
- 
+//is manager
+      $scope. isManager = function(){
+        if($scope.user.email === $scope.meet.createdBy){
+        //  alert("event manager");
+          return true;
+
+        }else{
+       //   alert(" not event manager");
+          return false;
+        }
+         
+    }
     
 });
 

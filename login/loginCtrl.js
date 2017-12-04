@@ -35,6 +35,7 @@ app.controller("loginCtrl", function($scope, $location, $http, User, activeUser)
                console.log ($scope.users[i]);
                 if ($scope.users[i].email === $scope.email && $scope.users[i].password === $scope.password) {
                     console.log ($scope.users[i]);
+                  //  alert($scope.users[i].email);
                     return $scope.users[i];
 
                     
@@ -60,4 +61,5 @@ $http.get("data/users.json").then(function (response) {
 
 
 });
+
 });
