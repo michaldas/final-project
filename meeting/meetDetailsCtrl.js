@@ -64,7 +64,7 @@ $scope.clearCompleted = function() {
     };
  //costs     
       $scope.addCost = function addCost() {
-       var cost = new cost(costelement = $scope.formCostelement, amount = $scope.formAmount) ;
+       var cost = new Cost(costelement = $scope.formCostelement, amount = $scope.formAmount) ;
        $scope.meet.addCost(cost);
        $scope.formCostelement = "";
        $scope.formAmount = "";

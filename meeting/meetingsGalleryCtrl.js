@@ -27,6 +27,3 @@ $scope.newEvent = function () {
 }
 }); 
 
-//function myError(response) {
- //   console.log("error open file meet.json");
-//});
