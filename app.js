@@ -25,8 +25,8 @@ app.config(function($routeProvider) {
         templateUrl: "meeting/newEvent.html",
         controller: "newEventCtrl"
       })
-
-    
+      
+     
     .otherwise({
       redirectTo: "/"
     });

@@ -4,13 +4,33 @@
         <h2>Event Details</h2> 
       <!--  <p>{{isManager()}}</p>-->
         <button type="button" class="btn btn-danger" ng-click="update()">update</button>
+        <button type="button" class="btn btn-danger" ng-click="notComming ()" ng-show="isInvited()" >Not Comming</button>
+        <button  class="btn btn-danger" ng-click="comming()"  ng-show="isInvited()" >Comming</button>
         <div >
                 <h4>{{meet.title}}</h4>
                <h4>{{meet.date}}</h4>
                <h4>{{meet.time}}</h4>
                <h4>{{meet.location}}</h4>
                <h4>{{meet.createdBy}}</h4>
-        </div>      
+        </div> 
+      <div class = "confirm"  >
+        <h3>confirmation</h3>
+        
+                <form>
+                 Inviteds Amount:
+                  <input class="add-input" placeholder="Amount" type="number" ng-model="formInvitedConfirm" />
+                  Select from list :
+                  <ul>
+                      <li ng-repeat="task in meet.tasks">
+                        <input type="checkbox" ng-model="task.completed"/>
+                        <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
+                      </li>
+                      </ul>
+                  
+                  <button class="btn btn-primary" ng-click="confirm()" >save</button>
+                  
+                </form>
+      </div>
                <div>
                 <h3>Tasks</h3>
            <ul>

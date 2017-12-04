@@ -109,5 +109,37 @@ $scope.clearCompleted = function() {
         return false;
       }
     }
+//check if invited
+$scope.isInvited = function() {
+  for( var i = 0; i<$scope.meet.inviteds.length; i++){
+    if($scope.user.lastName === $scope.meet.inviteds[i].name) {
+        return true;
+    } return false;
+  }
+  }
+$scope.notComming = function(){
+  
+  for( var i = 0; i<$scope.meet.inviteds.length; i++){
+   // alert($scope.meet.inviteds[i].name);
+    alert(JSON.stringify($scope.user.lastName));
+    if($scope.user.lastName === $scope.meet.inviteds[i].name) {
+      $scope.meet.inviteds[i].amount = 0;
+      $scope.meet.inviteds[i].completed = true;
+      alert("invited");
+   
+    }
+  }
+}
+$scope.confirm = function(){
+  for( var i = 0; i<$scope.meet.inviteds.length; i++){
+  if($scope.user.lastName === $scope.meet.inviteds[i].name) {
+    $scope.meet.inviteds[i].amount = $scope.formInvitedConfirm;
+    $scope.meet.inviteds[i].completed = true;
+}
+}
+}
+$scope.comming = function(){
+  $location.path("/confirmation");
+}
 });
 
