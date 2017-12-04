@@ -99,6 +99,15 @@ $scope.clearCompleted = function() {
         }
          
     }
-    
+    $scope. isNotManager = function(){
+      if($scope.user.email !== $scope.meet.createdBy){
+      //  alert("not event manager");
+        return true;
+
+      }else{
+     //   alert("  event manager");
+        return false;
+      }
+    }
 });
 

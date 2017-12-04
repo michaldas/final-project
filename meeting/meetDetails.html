@@ -2,7 +2,7 @@
 
 <div class="container">
         <h2>Event Details</h2> 
-        <p>{{isManager()}}</p>
+      <!--  <p>{{isManager()}}</p>-->
         <button type="button" class="btn btn-danger" ng-click="update()">update</button>
         <div >
                 <h4>{{meet.title}}</h4>
@@ -23,11 +23,11 @@
                 <div>
               
                             <form>
-                              <input class="add-input" placeholder="New Item..." type="text" ng-model="formTaskItem" />
-                              <input class="add-input" placeholder="Amount" type="number" ng-model="formTaskAmount"  />
-                              <button class="btn btn-primary" ng-click="addTask()">Add Item</button>
-                              <button class="btn btn-primary" ng-click="clearCompleted()">Clear completed</button>
-                              <button class="btn btn-primary" ng-click="showCompleted()">display completed</button>
+                              <input class="add-input" placeholder="New Item..." type="text" ng-model="formTaskItem"  ng-disabled="isNotManager()"/>
+                              <input class="add-input" placeholder="Amount" type="number" ng-model="formTaskAmount" ng-disabled="isNotManager()" />
+                              <button class="btn btn-primary" ng-click="addTask()" ng-disabled="isNotManager()" >Add Item</button>
+                              <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()">Clear completed</button>
+                              <button class="btn btn-primary" ng-click="showCompleted()" ng-disabled="isNotManager()">display completed</button>
                               
                             </form>
                           
@@ -44,11 +44,11 @@
                         <div>
                       
                          <form>
-                        <input class="add-input" placeholder="name" type="text" ng-model="formInvitedName" />
-                        <input class="add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount"  />
-                         <button class="btn btn-primary" ng-click="addInvited()"> invite</button>
-                          <button class="btn btn-primary" ng-click="clearCompleted()">Clear completed</button>
-                        <button class="btn btn-primary" ng-click="showCompleted()">display completed</button>
+                        <input class="add-input" placeholder="name" type="text" ng-model="formInvitedName" ng-disabled="isNotManager()" />
+                        <input class="add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount" ng-disabled="isNotManager()"  />
+                         <button class="btn btn-primary" ng-click="addInvited()" ng-disabled="isNotManager()"> invite</button>
+                          <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()">Clear completed</button>
+                        <button class="btn btn-primary" ng-click="showCompleted()" ng-disabled="isNotManager()">display completed</button>
                            <p>Total :{{sumInvited()}}</p>           
                         </form>
                                   
@@ -66,9 +66,9 @@
                  <form  action="" method="POST" role="form" >
                                                                 
                          <div class="form-group" >
-                         <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" >
-                        <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="formAmount" > 
-                        <button type="submit" class="btn btn-primary" ng-click="addCost()">Add cost</button>
+                         <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" ng-disabled="isNotManager()" >
+                        <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="formAmount" ng-disabled="isNotManager()" > 
+                        <button type="submit" class="btn btn-primary" ng-click="addCost()" ng-disabled="isNotManager()">Add cost</button>
                         <p>Total Costs: {{sumCost()}}</p>
                                                 
                         </div>
