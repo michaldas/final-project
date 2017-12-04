@@ -37,7 +37,7 @@
         
         <div class="row">
           <div class="col-sm-4">
-                <h3>Tasks</h3>
+                <h4>Tasks</h4>
            <ul>
                <li ng-repeat="task in meet.tasks">
                  <button class="clear-btn" ng-click="removeTask()">Delete</button>  
@@ -59,7 +59,7 @@
                </div>
               </div>
                <div  class="col-sm-4">
-                        <h3>Inviteds</h3>
+                        <h4>Inviteds</h4>
                    <ul>
                        <li ng-repeat="invited in meet.inviteds">
                          <button class="clear-btn" ng-click="removeInvited()">Delete</button>  
@@ -67,6 +67,8 @@
                          <span class="completed-{{invited.completed}}">{{invited.name}} {{invited.amount}}</span>
                        </li>
                        </ul>
+                       <p>Total Inviteds:{{sumInvited()}}</p>  
+                       <p>Confirmed:{{sumConfirm()}}</p> 
                         <div>
                       
                          <form>
@@ -75,20 +77,21 @@
                          <button class="btn btn-primary" ng-click="addInvited()" ng-disabled="isNotManager()"> invite</button>
                          <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()">Clear completed</button>
                         <button class="btn btn-primary" ng-click="showCompleted()" ng-disabled="isNotManager()">display completed</button>
-                           <p>Total :{{sumInvited()}}</p>           
+                                   
                         </form>
                                   
                       </div>
               </div>
                
                <div  class="col-sm-4">
-                 <h3>Costs</h3>
+                 <h4>Costs</h4>
                 <ul>
                <li ng-repeat="cost in meet.costs">
                  <button class="clear-btn" ng-click="removeCost()">Delete</button>  
                  <span>{{cost.costelement}} {{cost.amount}}</span>
                </li>
                </ul>
+               <p>Total Costs: {{sumCost()}}</p>
                 <div>
                  <form  action="" method="POST" role="form" >
                                                                 
@@ -96,7 +99,7 @@
                          <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" ng-disabled="isNotManager()" >
                         <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="formAmount" ng-disabled="isNotManager()" > 
                         <button type="submit" class="btn btn-primary" ng-click="addCost()" ng-disabled="isNotManager()">Add cost</button>
-                        <p>Total Costs: {{sumCost()}}</p>
+                        
                                                 
                         </div>
                        

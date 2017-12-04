@@ -63,7 +63,22 @@ $scope.clearCompleted = function() {
       sum = sum + parseInt ($scope.meet.inviteds[i].amount);
     }
     return sum ;  
-    };
+    }
+    
+ 
+    $scope.sumConfirm = function() {
+      var sum = 0;
+      for( var i = 0; i<$scope.meet.inviteds.length; i++){
+       if ($scope.meet.inviteds[i].completed == true) {
+        sum = sum + parseInt ($scope.meet.inviteds[i].amount); }
+        
+      }
+      return sum ;
+    }
+
+
+
+
  //costs     
       $scope.addCost = function addCost() {
        var cost = new Cost(costelement = $scope.formCostelement, amount = $scope.formAmount) ;
