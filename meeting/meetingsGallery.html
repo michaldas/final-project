@@ -1,5 +1,5 @@
 <div class="navbar">
-    <a class="navbar-brand" ng-href="#!/">Title</a>
+    <a class="navbar-brand" ng-href="#!/">Home</a>
     <ul class="nav navbar-nav">
         <li class="active">
             <a ng-href="#!/meet">meetings</a>
@@ -18,8 +18,11 @@
 </div>
 <div class="container text-center">    
         <h3>Events Gallery</h3><br>
+        
         <button class="btn btn-danger"  ng-click="newEvent()" >New Event</button>
       <button type="button" class="btn btn-default" ng-click="sortBy('date: dd/MM/yyy')">Order BY Date</button>
+      <label for="search">Search: </label>
+       <input type="text" ng-model="query.title" id="search">
         <div class="row">
           
                 <div ng-repeat="meet in meetings | filter : query | orderBy: orderProp" class = "well col-xs-12 col-sm-4 col-md-4 col-lg-4 gallery-item">

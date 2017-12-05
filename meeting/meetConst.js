@@ -7,7 +7,6 @@ app.factory("Meet" , function(){
        this.location = location;
        this.createdBy = createdBy;
       // this.meetId =Math.floor((Math.random() * 10000));
-      this.meetId = meetId;
       // this.createdBy = user.email;
        this.tasks = [];
        this.costs =  [];
