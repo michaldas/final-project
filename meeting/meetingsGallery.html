@@ -1,5 +1,5 @@
 <div class="navbar">
-    <a class="navbar-brand" href="#">Title</a>
+    <a class="navbar-brand" ng-href="#!/">Title</a>
     <ul class="nav navbar-nav">
         <li class="active">
             <a ng-href="#!/meet">meetings</a>
@@ -18,18 +18,20 @@
 </div>
 <div class="container text-center">    
         <h3>Events Gallery</h3><br>
-        <button class="btn btn-danger"  ng-click="newEvent()" >New Event</button> 
+        <button class="btn btn-danger"  ng-click="newEvent()" >New Event</button>
+      <button type="button" class="btn btn-default" ng-click="sortBy('date: dd/MM/yyy')">Order BY Date</button>
         <div class="row">
           
-                <div ng-repeat="meet in meetings" class = "well col-xs-12 col-sm-4 col-md-4 col-lg-4 gallery-item">
+                <div ng-repeat="meet in meetings | filter : query | orderBy: orderProp" class = "well col-xs-12 col-sm-4 col-md-4 col-lg-4 gallery-item">
                        <h3>{{meet.title}}</h3>
-                       <h4>When : {{meet.date| date}}</h4>
-                       <h4>{{meet.time}}</h4>
+                       <h4>When : {{meet.date| date: "dd/MM/yyyy" }}</h4>
+                       <h4>{{meet.time| date: "hh:mm"}}</h4>
                        <h4>where : {{meet.location}}</h4>
                        <h4>{{meet.createdBy}}</h4>   
                        <h4>{{meet.meetId}}</h4>  
                        <button type="button" class="btn btn-default" ng-click="openDetails($index)">Details</button>    
                 </div>
+               <!-- <button type="button" class="btn btn-default" ng-click="sortBy()">Order BY Date</button>-->
                 
          
             
