@@ -1,6 +1,12 @@
+
+body{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
 li {
     list-style: none;
-    color:blue;
   }
   .completed-true {
     text-decoration: line-through;
@@ -15,4 +21,18 @@ li {
 }
 .show{
   display: inline;
+}
+.box{
+height: 350px;
+width:30%;
+background-color: #dddddd;
+margin: 4px;
+position: relative;
+}
+.amount{
+  width: 22%;
+}
+.boxinput{
+ position: absolute;
+ bottom: 10px; 
 }

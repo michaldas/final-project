@@ -37,46 +37,55 @@
       <div class="container">    
         
         <div class="row">
-          <div class="col-sm-4">
+          <div class="box col-sm-4">
+              <div class="boxtitle">
                 <h4>Tasks</h4>
+              </div>
+         <div class="boxlist">
            <ul>
                <li ng-repeat="task in meet.tasks">
-                 <button class="clear-btn" ng-click="removeTask()">Delete</button>  
+                 <button class="clear-btn" ng-click="removeTask()"><i class="fa fa-trash-o"></i></button>  
                  <input type="checkbox" ng-model="task.completed"/>
                  <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
                </li>
                </ul>
-                <div>
+         </div>
+                <div class="boxinput">
               
                             <form>
                               <input class="add-input" placeholder="New Item..." type="text" ng-model="formTaskItem"  ng-disabled="isNotManager()"/>
-                              <input class="add-input" placeholder="Amount" type="number" ng-model="formTaskAmount" ng-disabled="isNotManager()" />
-                              <button class="btn btn-primary" ng-click="addTask()" ng-disabled="isNotManager()" >Add Item</button>
-                              <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()">Clear completed</button>
+                              <input class="amount add-input" placeholder="Amount" type="number" ng-model="formTaskAmount" ng-disabled="isNotManager()" />
+                              <button  class="btn btn-primary" ng-click="addTask()" ng-disabled="isNotManager()" >Add</button>
+                              <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()"><i class="fa fa-trash-o"></i> completed</button>
                               <button class="btn btn-primary" ng-click="showCompleted()" ng-disabled="isNotManager()">display completed</button>
                               
                             </form>
                           
                </div>
               </div>
-               <div  class="col-sm-4">
+               <div  class="box col-sm-4">
+                  <div class="boxtitle">
                         <h4>Inviteds</h4>
+                        <i class="fa fa-users"></i>
+                    </div>
+                  <div class="boxlist">
                    <ul>
                        <li ng-repeat="invited in meet.inviteds">
-                         <button class="clear-btn" ng-click="removeInvited()">Delete</button>  
+                         <button class="clear-btn" ng-click="removeInvited()"><i class="fa fa-trash-o"></i></button>  
                          <input type="checkbox" ng-model="invited.completed"/>
                          <span class="completed-{{invited.completed}}">{{invited.name}} {{invited.amount}}</span>
                        </li>
                        </ul>
                        <p>Total Inviteds:{{sumInvited()}}</p>  
-                       <p>Confirmed:{{sumConfirm()}}</p> 
-                        <div>
+                       <p>Confirmed:{{sumConfirm()}}</p>
+                  </div> 
+                        <div class="boxinput">
                       
                          <form>
                         <input class="add-input" placeholder="name" type="text" ng-model="formInvitedName" ng-disabled="isNotManager()" />
-                        <input class="add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount" ng-disabled="isNotManager()"  />
+                        <input class="amount add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount" ng-disabled="isNotManager()"  />
                          <button class="btn btn-primary" ng-click="addInvited()" ng-disabled="isNotManager()"> invite</button>
-                         <button class="btn btn-primary" ng-click="clearCompletedInv()" ng-disabled="isNotManager()">Clear completed</button>
+                         <button class="btn btn-primary" ng-click="clearCompletedInv()" ng-disabled="isNotManager()"><i class="fa fa-trash-o"></i> completed</button>
                         <button class="btn btn-primary" ng-click="showCompletedInv()" ng-disabled="isNotManager()">display completed</button>
                                    
                         </form>
@@ -84,22 +93,26 @@
                       </div>
               </div>
                
-               <div  class="col-sm-4">
-                 <h4>Costs</h4>
+               <div  class="box col-sm-4">
+                <div class="boxtitle">
+                <h4>Costs</h4>
+                </div> 
+                <div class="boxlist">
                 <ul>
                <li ng-repeat="cost in meet.costs">
-                 <button class="clear-btn" ng-click="removeCost()">Delete</button>  
+                 <button class="clear-btn" ng-click="removeCost()"><i class="fa fa-trash-o"></i></button>  
                  <span>{{cost.costelement}} {{cost.amount}}</span>
                </li>
                </ul>
                <p>Total Costs: {{sumCost()}}</p>
-                <div>
+              </div>
+                <div class="boxinput">
                  <form  action="" method="POST" role="form" >
                                                                 
                          <div class="form-group" >
                          <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" ng-disabled="isNotManager()" >
-                        <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="formAmount" ng-disabled="isNotManager()" > 
-                        <button type="submit" class="btn btn-primary" ng-click="addCost()" ng-disabled="isNotManager()">Add cost</button>
+                        <input type="number" class="amount add-input" id="amount" placeholder="Amount" ng-model="formAmount" ng-disabled="isNotManager()" > 
+                        <button type="submit" class="btn btn-primary" ng-click="addCost()" ng-disabled="isNotManager()">Add</button>
                         
                                                 
                         </div>
