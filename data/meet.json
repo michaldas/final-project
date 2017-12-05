@@ -1,11 +1,10 @@
 [
 {
  "title" : "80 Birthday Party" ,
- "date" : "01/01/2018" ,
+ "date" : "12/12/2018" ,
  "time" : "20:00",
  "location" : "Tel- Aviv",
  "createdBy": "mmm@mmm.com",
- "meetId" : 7536,
  "tasks": [
      {
          "item" : "Bamba",
@@ -51,7 +50,6 @@
     "time" : "10:00",
     "location" : "Jerusalem forest",
     "createdBy": "marina@mmm.com",
-    "meetId" : 8514,
     "tasks": [
         {
             "item" : "Picnic Map",
