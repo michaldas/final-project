@@ -12,6 +12,7 @@ app.factory("Meet" , function(){
        this.tasks = [];
        this.costs =  [];
        this.inviteds = [];
+        this.messanges = [];
 
        this.addTask = function(task) {
            this.tasks.push(task);
