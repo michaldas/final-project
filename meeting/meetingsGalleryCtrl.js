@@ -4,7 +4,7 @@ app.controller("meetingsGalleryCtrl", function ($scope, meetings, $http, $log, $
     $scope.user = activeUser.get();
     // alert(JSON.stringify($scope.user.email));   
     
-   // console.log($scope.meetings);*/
+   console.log($scope.meetings);
    if (meetings.getAll().length === 0){
     $scope.meetings = []  ; 
    $http.get("data/meet.json").then(function mySuccess(response) {

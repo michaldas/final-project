@@ -96,7 +96,6 @@
         "time" : "19:00",
         "location" : "Haifa",
         "createdBy": "mmm@mmm.com",
-        "meetId" : 1468,
         "tasks": [
             {
                 "item" : "Candels",
@@ -134,7 +133,6 @@
             "time" : "09:00",
             "location" : "Here",
             "createdBy": "marina@mmm.com",
-            "meetId" : 5361,
             "tasks": [
                 {
                     "item" : "cake",
