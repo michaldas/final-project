@@ -26,9 +26,11 @@ li {
 .box{
 height: 350px;
 width:30%;
-background-color: #dddddd;
-margin: 4px;
+background-color: #eeeeee;
+margin: 8px;
 position: relative;
+border: solid 4px #6D645C; 
+border-radius: 15px 50px; 
 }
 .amount{
   width: 22%;
@@ -40,12 +42,28 @@ position: relative;
 .boxicon{
   font-size:30px;
   padding: 10px;
-  border:solid black 4px;
-  border-radius: 30px;
+  
   position: absolute;
-  top:-5px;
-  right: -5px;
+  top:5px;
+  right:5px;
 }
 .boxtitle{
   text-align: center;
+}
+.btn-primary{
+  background-color: #aaaaaa;
+  border-color: #888888;
+}
+.map{
+  height: 250px;
+  margin: 8px;
+  border: solid 4px #6D645C; 
+  display: inline-block;
+}
+.notes{
+  height: 250px;
+  width: 20%;
+  border: solid 4px #6D645C; 
+  margin: 8px;
+  display: inline-block;
 }
