@@ -12,17 +12,22 @@
         </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><a ng-href="#!/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        <li><a ng-href="#!/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
 
 </div>
-<div class="container text-center">    
+
+<div class="container text-center">
+        <div>
+                <label for="search">Search : <span class="glyphicon glyphicon-search"></span> </label>
+                <input type="text" ng-model="query.title" placeholder="Search Title" id="search">
+                <button type="button" class="btn btn-default" ng-click="sortBy('date: dd/MM/yyy')">Order BY Date</button>
+        </div>    
         <h3>Events Gallery</h3><br>
         
-        <button class="btn btn-danger"  ng-click="newEvent()" >New Event</button>
-      <button type="button" class="btn btn-default" ng-click="sortBy('date: dd/MM/yyy')">Order BY Date</button>
-      <label for="search">Search: </label>
-       <input type="text" ng-model="query.title" placeholder="Search Title" id="search">
+     <!--   <button class="btn btn-danger"  ng-click="newEvent()" >New Event</button>-->
+      
+      
         <div class="row">
           
                 <div ng-repeat="meet in meetings | filter : query | orderBy: orderProp" class = "well col-xs-12 col-sm-4 col-md-4 col-lg-4 gallery-item">
@@ -38,7 +43,9 @@
                 
          
             
-        </div>   
+        </div>
+        <button class="btn btn-block btn-success"  ng-click="newEvent()" >Create New Event</button>
+        
           
  </div>
 <br>

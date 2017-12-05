@@ -16,6 +16,8 @@ li {
   width:30%;
   margin:5px ;
   padding: 14px;
+  border-radius: 15px ; 
+  
 }
 .hide{
   display : none;
@@ -49,6 +51,10 @@ border-radius: 15px 50px;
 }
 .boxtitle{
   text-align: center;
+}
+.boxlist{
+  height: 250px;
+  overflow: scroll;
 }
 .btn-primary{
   background-color: #aaaaaa;

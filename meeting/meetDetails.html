@@ -5,10 +5,10 @@
      <h2>{{meet.title}}</h2> 
      
       <!--  <p>{{isManager()}}</p>-->
-              <h4>Event details:</h4>
+              
                <h4>Date:{{meet.date| date: "dd/MM/yyyy"}} Time: {{meet.time| date:"hh:mm" }}</h4>
                <h4>Where: {{meet.location}}</h4>
-               <h4>Created by:{{meet.createdBy}}</h4>
+               <h5>Created by:{{meet.createdBy}}</h5>
        </div>
       <div>
        <button type="button" class="btn btn-success" ng-click="update()">Gallery</button>
@@ -36,10 +36,10 @@
 </div>
       <div class="container"> 
      <div class="row">
-            <div class="map col-sm-8">
+            <div class="map col-xs-12 col-sm-8 col-md-8 col-lg-8">
 
             </div>
-            <div class="notes col-sm4">
+            <div class="notes col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <div>
                       <h4>Notes</h4>
                       <i class="glyphicon glyphicon-pushpin"></i>
@@ -66,9 +66,9 @@
               
         </div>
                 <div class="row">
-          <div class="box col-sm-4">
+          <div class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <div class="boxtitle">
-                <h4>Tasks</h4>
+                <h4>tasks /Items</h4>
                 <i class="boxicon fa fa-list-alt"></i>
               </div>
          <div class="boxlist">
@@ -93,7 +93,7 @@
                           
                </div>
               </div>
-               <div  class="box col-sm-4">
+               <div  class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
                   <div class="boxtitle">
                         <h4>Inviteds</h4>
                         <i class="boxicon fa fa-users"></i>
@@ -123,7 +123,7 @@
                       </div>
               </div>
                
-               <div  class="box col-sm-4">
+               <div  class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <div class="boxtitle">
                 <h4>Costs</h4>
                 <i class="boxicon fa fa-usd "></i>
