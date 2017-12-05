@@ -30,6 +30,9 @@ $scope. isManager = function(){
     
 }
 //check if activeUser == createdBY
+
+
+//sort by date
 $scope.sortBy = function(prop) {
     $scope.orderProp = "date";
   } 

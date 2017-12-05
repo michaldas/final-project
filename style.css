@@ -13,7 +13,8 @@ li {
     color: grey;
   }
 .gallery-item{
-  margin-right:5px ;
+  width:30%;
+  margin:5px ;
   padding: 14px;
 }
 .hide{
@@ -35,4 +36,16 @@ position: relative;
 .boxinput{
  position: absolute;
  bottom: 10px; 
+}
+.boxicon{
+  font-size:30px;
+  padding: 10px;
+  border:solid black 4px;
+  border-radius: 30px;
+  position: absolute;
+  top:-5px;
+  right: -5px;
+}
+.boxtitle{
+  text-align: center;
 }
