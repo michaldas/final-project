@@ -42,14 +42,14 @@ $scope.removeInvited = function() {
     $scope.meet.inviteds.splice(this.$index, 1); 
 }
 
-$scope.clearCompleted = function() {
+$scope.clearCompletedInv = function() {
     var oldList = $scope.meet.inviteds;
     $scope.meet.inviteds = [];
     angular.forEach(oldList, function(x) {
       if (!x.completed) $scope.meet.inviteds.push(x);
     });
   }
-   $scope.showCompleted = function() {
+   $scope.showCompletedInv = function() {
     var oldList = $scope.meet.inviteds;
     $scope.meet.inviteds = [];
     angular.forEach(oldList, function(x) {
