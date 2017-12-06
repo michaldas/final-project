@@ -13,8 +13,8 @@ li {
     color: grey;
   }
 .gallery-item{
-  width:30%;
-  margin:5px ;
+ /* width:30%;
+  margin:5px ;*/
   padding: 14px;
   border-radius: 15px ; 
   
@@ -27,9 +27,9 @@ li {
 }
 .box{
 height: 350px;
-width:30%;
+/*width:30%;*/
 background-color: #eeeeee;
-margin: 8px;
+/*margin: 8px;*/
 position: relative;
 border: solid 4px #6D645C; 
 border-radius: 15px 50px; 
