@@ -3,22 +3,31 @@
         "email" : "mmm@mmm.com",
         "password" : "mmm123",
         "firstName" : "Nir",
-        "lastName" : "Chanes",
-        "location" : "haifa"
+        "lastName" : "Chanes"
     },
     {
         "email" : "nnn@mmm.com",
         "password" : "nnn123",
         "firstName" : "MAR",
-        "lastName" : "VVVV",
-        "location" : "haifa"
+        "lastName" : "Roni"
     },
     {
         "email" : "marina@mmm.com",
         "password" : "123456",
         "firstName" : "Marina",
-        "lastName" : "BBB",
-        "location" : "Tel-Aviv"
+        "lastName" : "BBB"
+    },
+    {
+        "email" : "michaldasb@gmail.com",
+        "password" : "6397355",
+        "firstName" : "Michal",
+        "lastName" : "Matan"
+    },
+    {
+        "email" : "ariel@mmm.com",
+        "password" : "123123",
+        "firstName" : "Ariel",
+        "lastName" : "Avital"
     }
 ]
    

@@ -128,7 +128,7 @@
            ]
         },
         {
-            "title" : "graduation ceremony" ,
+            "title" : "Graduation ceremony" ,
             "date" : "07/12/2017" ,
             "time" : "09:00",
             "location" : "Here",
@@ -182,7 +182,63 @@
                 }
 
                ]
-            }
+            },
+            {
+                "title" : "יום הולדת לטלי" ,
+                "date" : "07/12/2017" ,
+                "time" : "09:00",
+                "location" : "Haifa",
+                "createdBy": "michaldasb@gmail.com",
+                "tasks": [
+                    {
+                        "item" : "cake",
+                        "amount" :1 ,
+                        "completed" : false
+                    },
+                    {
+                       "item" : "wine",
+                       "amount" : 20,
+                       "completed" : false
+                   },
+                   {
+                       "item" : "Flowers",
+                       "amount" : 1,
+                       "completed" : false
+                   }],
+                   "costs": [
+                       {
+                           "costelement": "food",
+                           "amount" : 400
+                       },
+                       {
+                           "costelement": "present",
+                           "amount" : 150 
+                       }
+                   ],
+                   "inviteds" : [
+                       {
+                           "name" : "Avital",
+                           "amount" : 4,
+                           "completed" : false
+                       },
+                       {
+                           "name" : "Chanes",
+                           "amount" : 3,
+                           "completed" : false
+                       },
+                       {
+                        "name" : "Matan",
+                        "amount" : 2,
+                        "completed" : false
+                    },
+                    {
+                        "name" : "BBB",
+                        "amount" : 1,
+                        "completed" : false
+                    }
+    
+                   ]
+                }
            
        
    
