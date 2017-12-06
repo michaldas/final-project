@@ -1,7 +1,8 @@
 app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task, $location, Cost, Invited ) {
+
  //   $scope.meetings = []; 
  $scope.user = activeUser.get();
-  alert(JSON.stringify($scope.user.email));
+  //alert(JSON.stringify($scope.user.email));
 
     $scope.meet = meetings.get($routeParams.meetIndex);
 

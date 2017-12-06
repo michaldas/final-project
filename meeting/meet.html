@@ -14,7 +14,7 @@ p" ><div ng-controller="meetCtrl" >
         <input type="text" class="add-input" id="location" placeholder="Input location" ng-model="location">
         
     </div>
-    <button type="submit" class="btn btn-primary" ng-click="addMeet()">Create</button>
+    <button type="button" class="btn btn-primary" ng-click="addMeet()">Create</button>
     </form>
     <div ng-repeat="meet in meetings">
         <h4>{{meet.title}}</h4>
@@ -61,7 +61,7 @@ p" ><div ng-controller="meetCtrl" >
         <p>Costs: {{sumCost()}}</p>
         
     </div>
-    <button type="submit" class="btn btn-primary" ng-click="addCost1()">Create</button>
+    <button type="button" class="btn btn-primary" ng-click="addCost1()">Create</button>
     </form>
     <div ng-repeat="cost in costs">
         <h2>{{cost.costelement}}</h2>
