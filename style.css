@@ -32,10 +32,8 @@ li {
 }
 .box{
 height: 350px;
-/*width:30%;*/
-background-color: #C6EEEB;
-/*margin: 8px;*/
-/*border: solid 4px #6D645C; */
+background-color: #eeeeee;
+border: solid 4px #6D645C; 
 border-radius: 15px 50px; 
 position: relative;
 }
@@ -48,9 +46,9 @@ position: relative;
  left: 10px; 
 }
 .boxicon{
-  font-size:30px;
+  font-size:40px;
   padding: 10px;
-  
+  color:#3E726A; 
   position: absolute;
   top:5px;
   right:5px;
@@ -58,6 +56,7 @@ position: relative;
 
 .boxtitle{
   text-align: center;
+  color:#6D645C; 
 }
 .boxlist{
   height: 250px;
@@ -96,14 +95,11 @@ a{
   color: #6D645C; 
   font-size: 18px;
 }
-.glyphicon-log-out{
-  right: 5px;
-}
 .color{
   color:#6D645C; 
 }
 .yellow-bg{
-  background-color: #EEE296;
+  background-color: #F58D2D;
 
 }
 footer{
@@ -111,4 +107,11 @@ footer{
   bottom: 4px;
   width:100%;
   background-color:#C6EEEB;
+}
+.btn-info{
+  background-color:#F58D2D;
+  border:#89C7BE; ;
+}
+.jumbotron{
+  background-color:#89C7BE; 
 }
