@@ -17,7 +17,9 @@ li {
   margin:5px ;*/
   padding: 14px;
   border-radius: 15px ; 
-  
+}
+.search{
+  text-align: left;
 }
 .hide{
   display : none;
@@ -61,6 +63,11 @@ position: relative;
   background-color: #aaaaaa;
   border-color: #888888;
 }
+.btn-success{
+  background-color: #aaaaaa;
+  border-color: #888888;
+
+}
 .map{
   height: 254px;
   margin: 8px;
@@ -70,7 +77,10 @@ position: relative;
 .notes{
   height: 250px;
   width: 20%;
-  border: solid 4px #6D645C; 
+  border: solid 4px #89C7BE; 
+  text-decoration-color: #FADF13;
+  color: #D1B91F;
+  caret-color: #90AAA8
   margin: 8px;
   display: inline-block;
 }

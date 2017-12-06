@@ -1,175 +1,158 @@
+
+
 <div class="container">
-<div class="navbar">
-  <a class="navbar-brand" ng-href="#!/">Home</a>
-  <ul class="nav navbar-nav">
-      <li class="active">
-          <a ng-href="#!/meet">meetings</a>
-      </li>
-      <li class="active">
-          <a ng-href="#!/new">New Event</a>
-      </li>
-      <li>
-      </li>
-  </ul>
-  <ul class="nav navbar-nav navbar-right">
-      <li><a ng-href="#!/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-    </ul>
-
-</div>
-
-
-  <div>
-    <h2>{{meet.title}}</h2>
-    <h4>Date:{{meet.date| date: "dd/MM/yyyy"}} Time: {{meet.time| date:"hh:mm" }}</h4>
-    <h4>Where: {{meet.location}}</h4>
-    <h5>Created by:{{meet.createdBy}}</h5>
-  </div>
-  <div>
-    <button type="button" class="btn btn-success" ng-click="update()">Gallery</button>
-    <button type="button" class="btn btn-success" ng-click="notComming ()" ng-show="isInvited()">Not Comming</button>
-    <button class="btn btn-success" ng-click="comming()" ng-show="isInvited()">Comming</button>
-  </div>
-  <div class="hide" id="confirm">
-    <h3>confirmation</h3>
-
-    <form>
-      Inviteds Amount:
-      <input class="add-input" placeholder="Amount" type="number" ng-model="formInvitedConfirm" /> Select from list :
-      <ul>
-        <li ng-repeat="task in meet.tasks">
-          <input type="checkbox" ng-model="task.completed" />
-          <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
-        </li>
-      </ul>
-
-      <button class="btn btn-primary" ng-click="confirm()">save</button>
-
-    </form>
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="map col-xs-12 col-sm-8 col-md-8 col-lg-8">
-      <iframe
-      width="100%"
-      height="250"
-      frameborder="0" style="border:0"
-      ng-src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAEaQhf_nsqkommrumzD6vARkQsTRFPGi4&q=Tel-Aviv" allowfullscreen>
-    </iframe>
-    </div>
-    <!--
-    <div class="notes col-xs-12 col-sm-4 col-md-4 col-lg-4">
+  <div >
+     <h2>{{meet.title}}</h2> 
+     
+      <!--  <p>{{isManager()}}</p>-->
+              
+               <h4>Date:{{meet.date| date: "dd/MM/yyyy"}} Time: {{meet.time| date:"hh:mm" }}</h4>
+               <h4>Where: {{meet.location}}</h4>
+               <h5>Created by:{{meet.createdBy}}</h5>
+       </div>
       <div>
-        <h4>Notes</h4>
-        <i class="glyphicon glyphicon-pushpin"></i>
-        <i class="icon-pushpin"></i>
+       <button type="button" class="btn btn-success" ng-click="update()">Gallery</button>
+       <button type="button" class="btn btn-success" ng-click="notComming ()" ng-show="isInvited()" >Not Comming</button>
+       <button  class="btn btn-success" ng-click="comming()"  ng-show="isInvited()" >Comming</button>
       </div>
-      <div class="boxlist">
-        <ul>
-          <li ng-repeat="">
-            <button class="clear-btn" ng-click="()"><i class="fa fa-trash-o"></i></button>
-            <span>{{}} {{}}</span>
-          </li>
-        </ul>
+      <div class = "hide" id = "confirm" >
+        <h3>confirmation</h3>
+        
+                <form>
+                 Inviteds Amount:
+                  <input class="add-input" placeholder="Amount" type="number" ng-model="formInvitedConfirm" />
+                  Select from list :
+                  <ul>
+                      <li ng-repeat="task in meet.tasks">
+                        <input type="checkbox" ng-model="task.completed"/>
+                        <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
+                      </li>
+                      </ul>
+                  
+                  <button class="btn btn-primary" ng-click="confirm()" >save</button>
+                  
+                </form>
       </div>
-      <div>
-        <form action="" method="POST" role="form">
-          <div class="form-group">
-            <input type="text" class="add-input" id="" placeholder="Note" ng-model="">
-            <button type="button" class="btn btn-primary" ng-click="">Add</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    -->
-  </div>
-  <div class="row">
-    <div class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="boxtitle">
-        <h4>tasks /Items</h4>
-        <i class="boxicon fa fa-list-alt"></i>
-      </div>
-      <div class="boxlist">
-        <ul>
-          <li ng-repeat="task in meet.tasks">
-            <button class="clear-btn" ng-click="removeTask()"><i class="fa fa-trash-o"></i></button>
-            <input type="checkbox" ng-model="task.completed" />
-            <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
-          </li>
-        </ul>
-      </div>
-      <div class="boxinput">
+</div>
+      <div class="container"> 
+     <div class="row">
+            <div class="map col-xs-12 col-sm-8 col-md-8 col-lg-8">
 
-        <form>
-          <input class="add-input" placeholder="New Item..." type="text" ng-model="formTaskItem" ng-disabled="isNotManager()" />
-          <input class="amount add-input" placeholder="Amount" type="number" ng-model="formTaskAmount" ng-disabled="isNotManager()"
-          />
-          <button class="btn btn-primary" ng-click="addTask()" ng-disabled="isNotManager()">Add</button>
-          <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()"><i class="fa fa-trash-o"></i> completed</button>
-          <button class="btn btn-primary" ng-click="showCompleted()" ng-disabled="isNotManager()">display completed</button>
+            </div>
+            <div class="notes col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div>
+                      <h4>Notes</h4>
+                      <i class="glyphicon glyphicon-pushpin"></i>
+                      
+                </div> 
+                <div class="boxlist">
+                      <ul>
+                       <li ng-repeat="">
+                         <button class="clear-btn" ng-click="()"><i class="fa fa-trash-o"></i></button>  
+                         <span>{{}} {{}}</span>
+                       </li>
+                      </ul>
+                </div>
+                <div >
+                    <form  action="" method="POST" role="form" >
+                      <div class="form-group" >
+                          <input type="text" class="add-input" id="" placeholder="Note" ng-model=""  >
+                          <button type="submit" class="btn btn-primary" ng-click="">Add</button>
+                      </div>
+                    </form>
+                </div>
 
-        </form>
+            </div>
+              
+        </div>
+                <div class="row">
+          <div class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="boxtitle">
+                <h4>tasks /Items</h4>
+                <i class="boxicon fa fa-list-alt"></i>
+              </div>
+         <div class="boxlist">
+           <ul>
+               <li ng-repeat="task in meet.tasks">
+                 <button class="clear-btn" ng-click="removeTask()"><i class="fa fa-trash-o"></i></button>  
+                 <input type="checkbox" ng-model="task.completed"/>
+                 <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span>
+               </li>
+               </ul>
+         </div>
+                <div class="boxinput">
+              
+                            <form>
+                              <input class="add-input" placeholder="New Item..." type="text" ng-model="formTaskItem"  ng-disabled="isNotManager()"/>
+                              <input class="amount add-input" placeholder="Amount" type="number" ng-model="formTaskAmount" ng-disabled="isNotManager()" />
+                              <button  class="btn btn-primary" ng-click="addTask()" ng-disabled="isNotManager()" >Add</button>
+                              <button class="btn btn-primary" ng-click="clearCompleted()" ng-disabled="isNotManager()"><i class="fa fa-trash-o"></i> completed</button>
+                              <button class="btn btn-primary" ng-click="showCompleted()" ng-disabled="isNotManager()">display completed</button>
+                              
+                            </form>
+                          
+               </div>
+              </div>
+               <div  class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                  <div class="boxtitle">
+                        <h4>Inviteds</h4>
+                        <i class="boxicon fa fa-users"></i>
+                    </div>
+                  <div class="boxlist">
+                   <ul>
+                       <li ng-repeat="invited in meet.inviteds">
+                         <button class="clear-btn" ng-click="removeInvited()"><i class="fa fa-trash-o"></i></button>  
+                         <input type="checkbox" ng-model="invited.completed"/>
+                         <span class="completed-{{invited.completed}}">{{invited.name}} {{invited.amount}}</span>
+                       </li>
+                       </ul>
+                       <p>Total Inviteds:{{sumInvited()}}</p>  
+                       <p>Confirmed:{{sumConfirm()}}</p>
+                  </div> 
+                        <div class="boxinput">
+                      
+                         <form>
+                        <input class="add-input" placeholder="name" type="text" ng-model="formInvitedName" ng-disabled="isNotManager()" />
+                        <input class="amount add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount" ng-disabled="isNotManager()"  />
+                         <button class="btn btn-primary" ng-click="addInvited()" ng-disabled="isNotManager()"> invite</button>
+                         <button class="btn btn-primary" ng-click="clearCompletedInv()" ng-disabled="isNotManager()"><i class="fa fa-trash-o"></i> completed</button>
+                        <button class="btn btn-primary" ng-click="showCompletedInv()" ng-disabled="isNotManager()">display completed</button>
+                                   
+                        </form>
+                                  
+                      </div>
+              </div>
+               
+               <div  class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="boxtitle">
+                <h4>Costs</h4>
+                <i class="boxicon fa fa-usd "></i>
+                </div> 
+                <div class="boxlist">
+                <ul>
+               <li ng-repeat="cost in meet.costs">
+                 <button class="clear-btn" ng-click="removeCost()"><i class="fa fa-trash-o"></i></button>  
+                 <span>{{cost.costelement}} {{cost.amount}}</span>
+               </li>
+               </ul>
+               <p>Total Costs: {{sumCost()}}</p>
+              </div>
+                <div class="boxinput">
+                 <form  action="" method="POST" role="form" >
+                                                                
+                         <div class="form-group" >
+                         <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" ng-disabled="isNotManager()" >
+                        <input type="number" class="amount add-input" id="amount" placeholder="Amount" ng-model="formAmount" ng-disabled="isNotManager()" > 
+                        <button type="submit" class="btn btn-primary" ng-click="addCost()" ng-disabled="isNotManager()">Add</button>
+                         </<form>
+                           
+                                                
+                        </div>
+                       
 
-      </div>
-    </div>
-    <div class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="boxtitle">
-        <h4>Inviteds</h4>
-        <i class="boxicon fa fa-users"></i>
-      </div>
-      <div class="boxlist">
-        <ul>
-          <li ng-repeat="invited in meet.inviteds">
-            <button class="clear-btn" ng-click="removeInvited()"><i class="fa fa-trash-o"></i></button>
-            <input type="checkbox" ng-model="invited.completed" />
-            <span class="completed-{{invited.completed}}">{{invited.name}} {{invited.amount}}</span>
-          </li>
-        </ul>
-        <p>Total Inviteds:{{sumInvited()}}</p>
-        <p>Confirmed:{{sumConfirm()}}</p>
-      </div>
-      <div class="boxinput">
-
-        <form>
-          <input class="add-input" placeholder="name" type="text" ng-model="formInvitedName" ng-disabled="isNotManager()" />
-          <input class="amount add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount" ng-disabled="isNotManager()"
-          />
-          <button class="btn btn-primary" ng-click="addInvited()" ng-disabled="isNotManager()"> invite</button>
-          <button class="btn btn-primary" ng-click="clearCompletedInv()" ng-disabled="isNotManager()"><i class="fa fa-trash-o"></i> completed</button>
-          <button class="btn btn-primary" ng-click="showCompletedInv()" ng-disabled="isNotManager()">display completed</button>
-
-        </form>
-
-      </div>
-    </div>
-
-    <div class="box col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="boxtitle">
-        <h4>Costs</h4>
-        <i class="boxicon fa fa-usd "></i>
-      </div>
-      <div class="boxlist">
-        <ul>
-          <li ng-repeat="cost in meet.costs">
-            <button class="clear-btn" ng-click="removeCost()"><i class="fa fa-trash-o"></i></button>
-            <span>{{cost.costelement}} {{cost.amount}}</span>
-          </li>
-        </ul>
-        <p>Total Costs: {{sumCost()}}</p>
-      </div>
-      <div class="boxinput">
-        <form action="" method="POST" role="form">
-
-          <div class="form-group">
-            <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" ng-disabled="isNotManager()">
-            <input type="number" class="amount add-input" id="amount" placeholder="Amount" ng-model="formAmount" ng-disabled="isNotManager()">
-            <button type="button" class="btn btn-primary" ng-click="addCost()" ng-disabled="isNotManager()">Add</button>
-            </<form>
-
-
-          </div>
-
-
-      </div>
-    </div>
-  </div>
+               </div>
+       </div>    
+   </div>
+   
+   
+   
