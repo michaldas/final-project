@@ -1,6 +1,6 @@
 app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task, $location, Cost, Invited ) {
 
-  $scope.test = "https://www.google.com/maps/embed/v1/search?key=AIzaSyAEaQhf_nsqkommrumzD6vARkQsTRFPGi4&q=Tel-Aviv";
+ // $scope.test = "https://www.google.com/maps/embed/v1/search?key=AIzaSyAEaQhf_nsqkommrumzD6vARkQsTRFPGi4&q=Tel-Aviv";
 
  //   $scope.meetings = []; 
  $scope.user = activeUser.get();
