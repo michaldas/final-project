@@ -33,9 +33,9 @@ li {
 .box{
 height: 350px;
 /*width:30%;*/
-background-color: #eeeeee;
+background-color: #C6EEEB;
 /*margin: 8px;*/
-border: solid 4px #6D645C; 
+/*border: solid 4px #6D645C; */
 border-radius: 15px 50px; 
 position: relative;
 }
