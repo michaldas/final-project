@@ -9,8 +9,6 @@
                 <input type="text" class="form-control" id="title" placeholder="Input text" ng-model="title"><br>
                 <label for="date">Date : </label>
                 <input type="date" ng-model="date">
-            <!--  <input type="date" class="add-input" id="date" placeholder="Input Date" ng-model="date" >-->
-              <!--  <label for="time">Time</label>-->
                 <input type="time" class="add-input" id="time" placeholder="Input Time" ng-model="time"><br>
                 <label for="location">Location : </label>
                 <input type="text" class="form-control" id="location" placeholder="Input location" ng-model="location">
@@ -23,65 +21,5 @@
         </div>
     </div>
     </div>      
-      <!--  <div ng-controller="taskListCtrl">
-            <h1>Tasks</h1>
-            <ul>
-          
-          <li ng-repeat= "task in tasks">
-            <button class="clear-btn" ng-click="delete()">Delete</button>
-            <input type="checkbox" ng-model="task.completed"/>
-             <span class="completed-{{task.completed}}">{{task.amount}} {{task.item}}</span></li>
-        </ul>
-        <form>
-          <input class="add-input" placeholder="New Item..." type="text" ng-model="formTaskItem" />
-          <input class="add-input" placeholder="Amount" type="number" ng-model="formTaskAmount"  />
-          <button class="btn btn-primary" ng-click="addTask()">Add Item</button>
-          <button class="btn btn-primary" ng-click="clearCompleted()">Clear completed</button>
-          <button class="btn btn-primary" ng-click="showCompleted()">display completed</button>
-          <p>Sum: {{sumTask()}}</p>
-        </form>
-        
-        
-        </div>
-        <div ng-controller="costsCtrl" >
-            
-            <form  action="" method="POST" role="form" >
-                <legend>Add Costs</legend>
-        
-            <div class="form-group" >
-                <label for="costelement">Costelement</label>
-                <input type="text" class="add-input" id="costelement" placeholder="Input text" ng-model="costelement" >
-                <label for="amount">Amount</label>
-                <input type="number" class="add-input" id="amount" placeholder="Input Amount" ng-model="amount" >
-                <p>Costs: {{sumCost()}}</p>
-                
-            </div>
-            <button type="button" class="btn btn-primary" ng-click="addCost1()">Create</button>
-            </form>
-            <div ng-repeat="cost in costs">
-                <h2>{{cost.costelement}}</h2>
-                <h2>{{cost.amount}}</h2>
-                
-            </div>
-           
-        </div>
-        
-        <div ng-controller="invitedCtrl" >
-            <h1>invited</h1>    
-            <ul>
-                        
-                        <li ng-repeat= "invited in inviteds" >
-                          <button class="clear-btn" ng-click="delete()">Delete</button>
-                          <input type="checkbox" ng-model="invited.completed"/>
-                         <span class="completed-{{invited.completed}}">{{invited.amount}} {{invited.name}}</span></li>
-                 </ul>
-                 <form>
-                        <input class="add-input" placeholder="New Item..." type="text" ng-model="name"  />
-                        <input class="add-input" placeholder="Amount" type="number" ng-model="amount"  />
-                        <button class="btn btn-primary" ng-click="addInvited()">Add Item</button>
-                        <button class="btn btn-primary" ng-click="clearCompleted()">Clear completed</button>
-                        <button class="btn btn-primary" ng-click="showCompleted()">display completed</button>
-                      </form>  
-                      <p>Inviteds: {{sumInvited()}}</p>-->
          
         </div>

@@ -1,14 +1,28 @@
+<div class="navbar">
+    <a class="navbar-brand" ng-href="#!/">Home</a>
+    <ul class="nav navbar-nav">
+        <li class="active">
+            <a ng-href="#!/meet">Events gallery</a>
+        </li>
+        <li class="active">
+            <a ng-href="#!/new">Create New Event</a>
+        </li>
+        <li>
+           <!-- <a href="#">Link</a>-->
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a ng-href="#!/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
 
+</div>
 
 <div class="container">
   <div >
      <h2>{{meet.title}}</h2> 
-     
-      <!--  <p>{{isManager()}}</p>-->
-              
-               <h4>Date:{{meet.date| date: "dd/MM/yyyy"}} Time: {{meet.time| date:"hh:mm" }}</h4>
-               <h4>Where: {{meet.location}}</h4>
-               <h5>Created by:{{meet.createdBy}}</h5>
+        <h4>Date:{{meet.date| date: "dd/MM/yyyy"}} Time: {{meet.time| date:"hh:mm" }}</h4>
+        <h4>Where: {{meet.location}}</h4>
+        <h5>Created by:{{meet.createdBy}}</h5>
        </div>
       <div>
        <button type="button" class="btn btn-success" ng-click="update()">Gallery</button>
@@ -114,12 +128,13 @@
                          <span class="completed-{{invited.completed}}">{{invited.name}} {{invited.amount}}</span>
                        </li>
                        </ul>
-                       <p>Total Inviteds:{{sumInvited()}}</p>  
-                       <p>Confirmed:{{sumConfirm()}}</p>
+                       
                   </div> 
                         <div class="boxinput">
                       
                         <form>
+                            <p>Total Inviteds:{{sumInvited()}}</p>  
+                            <p>Confirmed:{{sumConfirm()}}</p>
                         <input class="add-input" placeholder="name" type="text" ng-model="formInvitedName" ng-disabled="isNotManager()" />
                         <input class="amount add-input" placeholder="Amount" type="number" ng-model="formInvitedAmount" ng-disabled="isNotManager()"  />
                         <button class="btn btn-primary" ng-click="addInvited()" ng-disabled="isNotManager()"> invite</button>
@@ -145,14 +160,15 @@
                    <span>{{cost.costelement}} {{cost.amount}}</span>
                    </li>
                    </ul>
-                   <p>Total Costs: {{sumCost()}}</p>
+                 
                  </div>
                  <div class="boxinput">
                       <form  action="" method="POST" role="form" >
+                          <p>Total Costs: {{sumCost()}}</p>
                         <div class="form-group" >
                            <input type="text" class="add-input" id="costelement" placeholder="Input Costelement" ng-model="formCostelement" ng-disabled="isNotManager()" >
                            <input type="number" class="amount add-input" id="amount" placeholder="Amount" ng-model="formAmount" ng-disabled="isNotManager()" > 
-                           <button type="submit" class="btn btn-primary" ng-click="addCost()" ng-disabled="isNotManager()">Add</button>
+                           <button type="button" class="btn btn-primary" ng-click="addCost()" ng-disabled="isNotManager()">Add</button>
                         </div>
                       <form>
                   </div>     
