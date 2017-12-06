@@ -13,7 +13,7 @@ li {
     color: grey;
   }
 .gallery-item{
- /* width:30%;
+  /*width:30%;
   margin:5px ;*/
   padding: 14px;
   border-radius: 15px ; 
@@ -29,10 +29,10 @@ li {
 height: 350px;
 /*width:30%;*/
 background-color: #eeeeee;
-/*margin: 8px;*/
-position: relative;
-border: solid 4px #6D645C; 
+/*margin: 8px;
+border: solid 4px #6D645C; */
 border-radius: 15px 50px; 
+position: relative;
 }
 .amount{
   width: 22%;
@@ -49,6 +49,7 @@ border-radius: 15px 50px;
   top:5px;
   right:5px;
 }
+
 .boxtitle{
   text-align: center;
 }
@@ -61,9 +62,9 @@ border-radius: 15px 50px;
   border-color: #888888;
 }
 .map{
-  height: 250px;
+  height: 254px;
   margin: 8px;
-  border: solid 4px #6D645C; 
+  border: solid 2px #6D645C; 
   display: inline-block;
 }
 .notes{
