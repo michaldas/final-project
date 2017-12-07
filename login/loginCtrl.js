@@ -1,4 +1,6 @@
 app.controller("loginCtrl", function($scope, $location, $http, User, activeUser){
+    $scope.email = "marina@mmm.com";
+    $scope.password = "123456";
   
     $http.get("data/users.json").then(function (response) {
        $scope.users = [];
