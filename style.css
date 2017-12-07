@@ -80,6 +80,7 @@ position: relative;
 }
 .navbar{
   background-color:#89C7BE; 
+  position: relative;
  }
 a{
   color: #6D645C; 
@@ -104,9 +105,18 @@ footer{
 }
 .jumbotron{
   background-color:#89C7BE; 
+  position: relative;
 }
 .hpicon{
   font-size:60px;
   padding: 10px;
   color:#3E726A;  
+}
+.logo  {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left:5px;
+ 
+
 }

@@ -1,4 +1,4 @@
-app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task, $location, Cost, Invited ) {
+app.controller("meetDetailsCtrl", function ($scope, meetings, activeUser,  $routeParams, Meet, $http, Task, $location, Cost, Invited, $sce ) {
 
  // $scope.test = "https://www.google.com/maps/embed/v1/search?key=AIzaSyAEaQhf_nsqkommrumzD6vARkQsTRFPGi4&q=Tel-Aviv";
 
@@ -161,7 +161,9 @@ $scope.comming = function(){
  // element.classList.toggle("show");
 }
 
-
+$scope.getUrl = function() {
+  var loc = $scope.meet.location;
+  return $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/search?key=AIzaSyAEaQhf_nsqkommrumzD6vARkQsTRFPGi4&q=" + loc);}
 
 
 });
