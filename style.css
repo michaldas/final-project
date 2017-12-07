@@ -78,16 +78,6 @@ position: relative;
   border: solid 2px #6D645C; 
   display: inline-block;
 }
-.notes{
-  height: 250px;
-  width: 20%;
-  border: solid 4px #89C7BE; 
-  text-decoration-color: #ECDD78;
-  color: #D1B91F;
-  caret-color: #C6EEEB
-  margin: 8px;
-  display: inline-block;
-}
 .navbar{
   background-color:#89C7BE; 
  }
